@@ -5,8 +5,8 @@ subtitle: Leverage AI to automate complex workflows and decision-making processe
 cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/path.jpg
-tags: [books, test]
-author: Sharon Smith and Barry Simpson
+tags: [agent, custom, ai, automation, decision-making, workflow, knowledge-base]
+author: Feng Yonghua
 ---
 Custom AI Agents are intelligent systems designed to perform specific tasks autonomously, combining machine learning models, business rules, and workflow automation.
 
@@ -16,9 +16,11 @@ Custom AI Agents are intelligent systems designed to perform specific tasks auto
 - **Process Integration**： Off-the-shelf solutions rarely integrate seamlessly with existing business workflows
 - **Competitive Advantage** ： Custom agents can become unique differentiators in your market
 
+![why to customize the intelligent agent](/assets/img/hunting-info-services-20250408-en_06.png)
+
 ## Architecture
 
-![Architecture](/assets/img/custom-ai1.png)
+![Architecture](/assets/img/hunting-info-services-20250408-en_08.png)
 
 ## Key Components
 
@@ -50,6 +52,8 @@ Agents that automate multi-step workflows
   2. **Data Preparation**： Curate and structure relevant datasets
   3. **Model Training**： Develop and fine-tune machine learning models
   4. **Integration**： Connect with existing systems and APIs
+
+![process of building custom ai agent](/assets/img/hunting-info-services-20250408-en_07.png)
 
 - Technology Stack
   1. **Python/TensorFlow/PyTorch**

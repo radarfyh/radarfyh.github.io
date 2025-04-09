@@ -21,9 +21,9 @@ author: Feng Yonghua
 
 navbar-links:
   Services:
-    - Intelligent Agent: "/_posts/2025-04-03-building-custom-ai-agents"
-    - CRM System: "/_posts/2025-04-04-standard-crm-product"
-    - OA System: "/_posts/2025-04-05-standard-oa-product"
+    - Intelligent Agent: "intelligentagent"
+    - CRM System: "crmsystem"
+    - OA System: "oasystem"
   Join Us: "joinus"
   About Me: "aboutme"
 

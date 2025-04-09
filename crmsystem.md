@@ -1,22 +1,14 @@
 ---
-layout: post
-title: All-in-one CRM—seamlessly connect with customers and opportunities! 
-subtitle: Achieve end-to-end management from leads to payments
-cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/hunting-info-services-20250408-en_10.png
-share-img: /assets/img/path.jpg
-tags: [crm, sales, marketing, customer]
-author: Feng Yonghua
+layout: page
+title: CRM System Introduction
+subtitle: Data-driven decisions, lasting customer relationships!
 ---
-Customer Relationship Management System （CRM） helps businesses streamline marketing, sales, and service processes, automate management, and maximize customer value and corporate revenue. We provide you with better service access, efficient 24/7 support, comprehensive service guarantees, and diverse customer success programs. 
 
-## Why are you select our CRM product?
+Our AI-powered CRM system is the growth engine for modern businesses, delivering three core capabilities:
+- 360° Customer Profile - Unified communication history, transactions & behavioral data for precision insights
+- Sales Automation - End-to-end automation from lead assignment to deal closure, boosting conversions by 40%
+- Data-Driven Decisions - Real-time dashboards identify high-value clients and emerging risks
 
-- **expert guida** ： With expert guidance at every step, we help you accelerate your business value—whether through SaaS cloud services or on-premises deployment
-- **specialized deployment team**： Our specialized implementation team works closely with clients to rapidly customize and deploy systems, along with tailored implementation and training plans
-- **lower cost** ： While enterprise management systems often cost millions, we strive to make advanced IT solutions accessible at a lower cost—whether via SaaS cloud services or independent source code deployment
-
-![why to select the CRM system](/assets/img/hunting-info-services-20250408-en_10.png)
 
 ## The Transformation of Business Structures, Commercial Models, and Profit Mechanisms in Traditional Industries
 

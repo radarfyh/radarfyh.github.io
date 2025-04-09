@@ -3,7 +3,7 @@ layout: post
 title: Understanding Custom AI Agents
 subtitle: Build Custom AI Agents for Autonomous Operations
 cover-img: /assets/img/flower.jpg
-thumbnail-img: /assets/img/thumb.png
+thumbnail-img: /assets/img/agent3.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
 author: Feng Yonghua

@@ -3,7 +3,7 @@ layout: post
 title: How to Build a Custom AI Agent
 subtitle: AI agents are transforming industries by automating tasks, analyzing data, and making intelligent decisions
 cover-img: /assets/img/flower.jpg
-thumbnail-img: /assets/img/thumb.png
+thumbnail-img: /assets/img/agent1.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
 author: Feng Yonghua

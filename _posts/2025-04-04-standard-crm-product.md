@@ -6,7 +6,7 @@ cover-img: /assets/img/path.jpg
 thumbnail-img: /assets/img/hunting-info-services-20250408-en_10.png
 share-img: /assets/img/path.jpg
 tags: [crm, sales, marketing, customer]
-author: Sharon Smith and Barry Simpson
+author: Feng Yonghua
 ---
 Customer Relationship Management System （CRM） helps businesses streamline marketing, sales, and service processes, automate management, and maximize customer value and corporate revenue. We provide you with better service access, efficient 24/7 support, comprehensive service guarantees, and diverse customer success programs. 
 

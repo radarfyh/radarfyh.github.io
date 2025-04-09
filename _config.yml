@@ -10,7 +10,7 @@
 ############################
 
 # Name of website
-title: Customized Intelligent Agent + OA/CRM
+title: Customized Intelligent Agents
 
 # Your name to show in the footer
 author: Feng Yonghua
@@ -21,10 +21,10 @@ author: Feng Yonghua
 
 navbar-links:
   Services:
-    - Intelligent Agent: "_posts/2025-04-03-building-custom-ai-agents"
-    - CRM System: "_posts/2025-04-04-standard-crm-product"
-    - OA System: "_posts/2025-04-05-standard-oa-product"
-  joinus: "joinus"
+    - Intelligent Agent: "/_posts/2025-04-03-building-custom-ai-agents"
+    - CRM System: "/_posts/2025-04-04-standard-crm-product"
+    - OA System: "/_posts/2025-04-05-standard-oa-product"
+  Join Us: "joinus"
   About Me: "aboutme"
 
 ################
@@ -86,7 +86,7 @@ social-network-links:
 
 # If you want your website to generate an RSS feed, provide a description
 # The URL for the feed will be https://<your_website>/feed.xml
-rss-description: This website is a virtual proof that I'm awesome
+rss-description: "Latest updates on Intelligent Agents, CRM System, and OA System"
 
 ###########################
 # --- General options --- #

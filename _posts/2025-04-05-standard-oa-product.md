@@ -6,7 +6,7 @@ cover-img: /assets/img/flower.jpg
 thumbnail-img: /assets/img/thumb.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
-author: Sharon Smith and Barry Simpson
+author: Feng Yonghua
 ---
 ## **Traditional Office Work is at a Turning Point:**  
 Driven by the wave of digital transformation, conventional organizational management is undergoing profound changes. With the surge in demand for remote collaboration, intelligent operations, and paperless workflows, outdated hierarchical structures, paper-based processes, and fragmented teamwork can no longer meet the needs of efficient operations—especially in cross-departmental coordination and workflow management.  

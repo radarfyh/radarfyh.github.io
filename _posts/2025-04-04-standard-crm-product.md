@@ -2,9 +2,9 @@
 layout: post
 title: CRM System
 subtitle: Achieve end-to-end management from leads to payments
-cover-img: /assets/img/hunting-info-services-20250408-en_10.png
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/hunting-info-services-20250408-en_10.png
+cover-img: /assets/img/path.png
+thumbnail-img: /assets/img/hunting-info-services-20250408-en_10.png
+share-img: /assets/img/path.png
 tags: [crm, sales, marketing, customer]
 author: Sharon Smith and Barry Simpson
 ---

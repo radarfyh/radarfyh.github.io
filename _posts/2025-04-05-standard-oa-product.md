@@ -2,9 +2,9 @@
 layout: post
 title: OA System
 subtitle: Achieve end-to-end management from leads to payments
-cover-img: /assets/img/hunting-info-services-20250408-en_16.png
+cover-img: /assets/img/flower.png
 thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/hunting-info-services-20250408-en_16.png
+share-img: /assets/img/flower.png
 tags: [oa, management, productivity, efficiency]
 author: Sharon Smith and Barry Simpson
 ---

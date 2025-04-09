@@ -2,9 +2,9 @@
 layout: post
 title: Building Custom AI Agents for Your Business
 subtitle: Leverage AI to automate complex workflows and decision-making processes
-cover-img: /assets/img/hunting-info-services-20250408-en_05.png
-thumbnail-img: /assets/img/thumb.png
-share-img: /assets/img/hunting-info-services-20250408-en_05.png
+cover-img: /assets/img/flower.png
+thumbnail-img: /assets/img/hunting-info-services-20250408-en_05.png
+share-img: /assets/img/flower.png
 tags: [agent, ai, workflow, knowledge-base]
 author: Feng Yonghua
 ---

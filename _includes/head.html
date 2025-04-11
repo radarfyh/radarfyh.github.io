@@ -161,11 +161,11 @@
   <link rel="stylesheet" href="{{ "/assets/css/staticman.css" | relative_url }}">
   {% endif %}
 
-  {% assign favicon_exists = site.static_files | where: "path", "/favicon.ico" | size %}
-  {% if favicon_exists == 1 %}
+  <!-- {% assign favicon_exists = site.static_files | where: "path", "/favicon.ico" | size %} -->
+  <!-- {% if favicon_exists == 1 %} -->
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" />
   <link rel="shortcut icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
-  {% endif %}
+  <!-- {% endif %} -->
 
   {% if page.head-extra %}
     {% for file in page.head-extra %}

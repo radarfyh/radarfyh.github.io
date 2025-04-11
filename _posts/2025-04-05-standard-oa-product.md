@@ -3,7 +3,7 @@ layout: post
 title: Smart OA system—work efficiently, collaborate effortlessly!
 subtitle: Achieve end-to-end management from leads to payments
 cover-img: /assets/img/flower.jpg
-thumbnail-img: /assets/img/hunting-info-services-20250408-en_17.png
+thumbnail-img: /assets/img/oaprofile.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
 author: Feng Yonghua

@@ -3,7 +3,7 @@ layout: post
 title: All-in-one CRM—seamlessly connect with customers and opportunities! 
 subtitle: Achieve end-to-end management from leads to payments
 cover-img: /assets/img/path.jpg
-thumbnail-img: /assets/img/hunting-info-services-20250408-en_10.png
+thumbnail-img: /assets/img/crmprofile.png
 share-img: /assets/img/path.jpg
 tags: [crm, sales, marketing, customer]
 author: Feng Yonghua

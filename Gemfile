@@ -4,3 +4,6 @@ source "https://rubygems.org"
 
 gemspec
 
+gem 'sassc'
+gem 'sass-embedded', '1.63.3'
+

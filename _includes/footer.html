@@ -38,8 +38,13 @@
 
       </p>
       {% unless site.remove-ads %}<p class="theme-by text-muted">
-        Powered by Beautiful Jekyll <a href="http://beian.miit.gov.cn/">ICP License: {{ site.icp-license }}</a>
+        Powered by Beautiful Jekyll</a>
       </p>{% endunless %}
+
+      </p>
+      {% if site.icp-license %}<p class="theme-by text-muted">
+        <a href="http://beian.miit.gov.cn/">ICP License: {{ site.icp-license }}</a>
+      </p>{% endif %}
       </div>
     </div>
   </div>

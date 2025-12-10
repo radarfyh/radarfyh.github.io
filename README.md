@@ -303,7 +303,125 @@ sudo dnf install -y git zlib-devel openssl-devel
 
 # 安装 Ruby 3.0+ (Rocky Linux 9默认仓库包含Ruby 3.0)
 sudo dnf install -y ruby ruby-devel rubygems
+# ---------------------------------------
+# centos7安装的ruby默认版本是ruby 2.0.0p648 (2015-12-16) [x86_64-linux] 需要升级到3.0
+# 更新SCL源，解决问题：Could not retrieve mirrorlist http://mirrorlist.centos.org?arch=x86_64&release=7&repo=sclo-rh error was 14: curl#52 - “Empty reply from server”
+# 备份原repo文件
+mkdir -p /etc/yum.repos.d/backup
+mv /etc/yum.repos.d/CentOS-SCLo*.repo /etc/yum.repos.d/backup/ 2>/dev/null
 
+# 创建阿里云SCL源
+cat > /etc/yum.repos.d/CentOS-SCLo-scl.repo << 'EOF'
+[centos-sclo-sclo]
+name=CentOS-7 - SCLo sclo
+baseurl=https://mirrors.aliyun.com/centos/7/sclo/$basearch/sclo/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-sclo-source]
+name=CentOS-7 - SCLo sclo Sources
+baseurl=https://mirrors.aliyun.com/centos/7/sclo/Source/sclo/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-sclo-debuginfo]
+name=CentOS-7 - SCLo sclo Debug
+baseurl=https://mirrors.aliyun.com/centos/7/sclo/$basearch/sclo/debug/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+EOF
+
+cat > /etc/yum.repos.d/CentOS-SCLo-rh.repo << 'EOF'
+[centos-sclo-rh]
+name=CentOS-7 - SCLo rh
+baseurl=https://mirrors.aliyun.com/centos/7/sclo/$basearch/rh/
+gpgcheck=1
+enabled=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-rh-source]
+name=CentOS-7 - SCLo rh Sources
+baseurl=https://mirrors.aliyun.com/centos/7/sclo/Source/rh/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[centos-sclo-rh-debuginfo]
+name=CentOS-7 - SCLo rh Debug
+baseurl=https://mirrors.aliyun.com/centos/7/sclo/$basearch/rh/debug/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+EOF
+# 清理yum缓存
+yum clean all
+rm -rf /var/cache/yum
+# 更新缓存
+yum makecache
+# 安装开发工具链
+yum install centos-release-scl -y
+yum install devtoolset-9 -y
+# 启用 devtoolset-9
+source /opt/rh/devtoolset-9/enable
+# 永久启用（添加到 bashrc）
+echo 'source /opt/rh/devtoolset-9/enable' >> ~/.bashrc
+# 添加gem阿里云镜像
+gem sources -a http://mirrors.aliyun.com/rubygems/
+# 安装RVM，用于管理Ruby版本
+#gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB 
+gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+#curl -sSL https://get.rvm.io | bash -s stable
+# 设置代理后安装
+export http_proxy=http://192.168.0.14:4780
+export https_proxy=http://192.168.0.14:4780
+curl -sSLk https://get.rvm.io | bash -s stable
+# 更新配置文件，使之立即生效
+source /etc/profile.d/rvm.sh
+# 检查ram版本
+rvm -v
+# 升级openssl到1.1.1k
+wget https://www.openssl.org/source/openssl-1.1.1k.tar.gz
+tar -zxvf openssl-1.1.1k.tar.gz
+cd openssl-1.1.1k
+./config --prefix=/usr/local/openssl --openssldir=/usr/local/openssl shared zlib
+make
+sudo make install
+sudo ldconfig -v
+sudo ln -sf /usr/local/openssl/bin/openssl /usr/bin/openssl
+openssl version -a
+export PATH=/usr/local/openssl/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/openssl/lib:$LD_LIBRARY_PATH
+source /etc/profile
+openssl s_client -connect example.com:443
+# 查看ruby版本
+rvm list known
+# 安装3.0.7
+#rvm install 3.0.7
+#rvm use 3.0.7
+rvm install ruby-2.7 --with-openssl-dir=/usr --autolibs=enable
+rvm use ruby-2.7 --default
+# 修复问题：Warning! PATH is not properly set up, /usr/local/rvm/gems/ruby-3.0.7/bin is not at first place.
+# 备份原文件
+cp ~/.bashrc ~/.bashrc.backup
+# 编辑 ~/.bashrc，在文件开头添加以下内容
+cat > ~/.bashrc << 'EOF'
+# RVM PATH Fix
+export rvm_silence_path_mismatch_check_flag=1
+export PATH="/usr/local/rvm/gems/ruby-3.0.7/bin:/usr/local/rvm/gems/ruby-3.0.7@global/bin:/usr/local/rvm/rubies/ruby-3.0.7/bin:$PATH"
+export GEM_HOME="/usr/local/rvm/gems/ruby-3.0.7"
+export GEM_PATH="/usr/local/rvm/gems/ruby-3.0.7:/usr/local/rvm/gems/ruby-3.0.7@global"
+# Load RVM
+[[ -s "/usr/local/rvm/scripts/rvm" ]] && source "/usr/local/rvm/scripts/rvm"
+# 原有的其他配置（如果有的话）
+EOF
+# 重新加载配置
+source ~/.bashrc
+
+# ---------------------------------------
+# 检查ruby版本
 ruby -v
 #显示结果------------
 ruby 3.0.7p220 (2024-04-23 revision 724a071175) [x86_64-linux]
@@ -313,28 +431,30 @@ gem -v
 3.2.33
 
 #gem默认版本为3.2.33，要升级，不然安装sass-embedded报错：sass-embedded-1.63.3-x86_64-linux-gnu requires rubygems version >= 3.3.22, which is incompatible with the current version, 3.2.33
-gem install rubygems-update -v 3.4.22
-#也可以使用如下指令
-#gem update --system 3.4.22
+#gem install rubygems-update -v 3.4.22
+gem update --system 3.4.22
 # 安装必要的开发工具
 sudo dnf install -y gcc gcc-c++ make patch
 
 # 设置全局镜像
-bundle config mirror.https://rubygems.org https://mirrors.aliyun.com/rubygems/
+bundle config mirror.https://mirrors.aliyun.com/rubygems/ https://rubygems.org 
+gem sources --remove https://rubygems.org/
+gem sources -l
 
-# 安装 Jekyll 和 Bundler
+# 对于rocklinux 9.x,安装 Jekyll 和 Bundler
 mkdir -p /usr/local/ruby/3.0.0
 # 指定安装到用户目录
 gem install --install-dir /usr/local/ruby/3.0.0 bundler
-
 gem install --install-dir /usr/local/ruby/3.0.0 jekyll
-
 # 将Ruby Gems添加到PATH
 echo 'export PATH=$PATH:/usr/local/ruby/3.0.0/bin' >> /etc/profile.d/ruby.sh
 source /etc/profile
-
 echo 'export PATH=$PATH:$HOME/.local/share/gem/ruby3.0/bin' >> ~/.bashrc
 source ~/.bashrc
+
+# 对于 centos 7.x，或者使用了rvm的rocky linux
+#gem install bundler
+#gem install jekyll
 
 # 检查版本，检查安装是否成功
 jekyll -v
@@ -345,24 +465,20 @@ bundler -v
 #显示结果------------
 Bundler version 2.4.22
 
+# 创建一个普通用户
+useradd -m -s /bin/bash radarfyh
+# 修复 RVM 权限
+rvm fix-permissions
+# 或者将 radarfyh 用户添加到 rvm 组
+# usermod -a -G rvm radarfyh
+# 切换到该用户
+su - radarfyh
+# 对于本地服务器要加代理才能访问github
+export http_proxy=http://192.168.0.14:4780
+export https_proxy=http://192.168.0.14:4780
 # 克隆项目
 git clone https://github.com/radarfyh/radarfyh.github.io
 cd radarfyh.github.io
-
-# 安装项目依赖
-
-chmod 664 /feng/radarfyh.github.io/Gemfile
-
-cd /feng/radarfyh.github.io
-
-# 设置项目镜像源，只对当前项目生效
-bundle config set --local mirror.https://rubygems.org https://mirrors.aliyun.com/rubygems/
-
-vi Gemfile
-# 在Gemfile中添加或替换以下内容
-gem 'sassc'
-gem 'sass-embedded', '1.63.3'
-
 bundle install
 #显示结果------------
 [radarfyh@iZ2ze6qcuxrmhddeb4m9xuZ radarfyh.github.io]$ bundle install
@@ -382,6 +498,9 @@ Bundle complete! 7 Gemfile dependencies, 40 gems now installed.
 Bundled gems are installed into `./vendor/bundle`
 1 installed gem you directly depend on is looking for funding.
   Run `bundle fund` for details
+
+# 开发环境运行 报错： /lib64/libc.so.6: version `GLIBC_2.27' not found ，因为centos 7.x不支持GLIBC_2.27
+bundle exec jekyll serve
 
 # 生产环境构建
 JEKYLL_ENV=production bundle exec jekyll build
@@ -444,6 +563,14 @@ location /site {
 
 #重载nginx配置文件
 nginx -s reload
+
+#设置SELinux
+sudo semanage fcontext -a -t httpd_sys_content_t "/feng-cloud/radarfyh.github.io/_site(/.*)?"
+sudo restorecon -Rv /feng-cloud/radarfyh.github.io/_site
+
+# 设置文件夹权限
+sudo chmod -R 755 /feng-cloud/radarfyh.github.io/_site
+sudo chown -R nginx:nginx /feng-cloud/radarfyh.github.io/_site
 
 #google网站收录，在DNS中增加TXT记录
 @ google-site-verification=PCzMVq6BqJ0qsJwgvOaNcHdFhCUGqyRHc3qfNFpxGFw

@@ -2,26 +2,27 @@
 <ul class="list-inline text-center footer-links">
 
 {%- for network in site.social-network-links -%}
+
   {%- if network[0] == "wechat" -%}
     <li class="list-inline-item">
-      <a href="{{ network[1] | default: 'weixin://' }}" title="{{ t.socials.wechat }}">
+      <a href="weixin://dl/add?{{ network[1] }}" title="{{ t.socials.wechat }} - {{ network[1] }}">
         <span class="fa-stack fa-lg" aria-hidden="true">
           <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fab fa-wechat fa-stack-1x fa-inverse"></i>
+          <i class="fab fa-weixin fa-stack-1x fa-inverse"></i>
         </span>
-        <span class="sr-only">{{ t.socials.wechat }}</span>
+        <span class="sr-only">{{ t.socials.wechat }} - {{ network[1] }}</span>
       </a>
     </li>
   {%- endif -%}
 
   {%- if network[0] == "qq" -%}
     <li class="list-inline-item">
-      <a href="tencent://message/?Uin={{ network[1] }}&Site={{ site.url }}&Menu=yes" title="{{ t.socials.qq }}">
+      <a href="tencent://message/?uin={{ network[1] }}&Site={{ site.title }}&Menu=yes" title="{{ t.socials.qq }} - {{ network[1] }}">
         <span class="fa-stack fa-lg" aria-hidden="true">
           <i class="fas fa-circle fa-stack-2x"></i>
           <i class="fab fa-qq fa-stack-1x fa-inverse"></i>
         </span>
-        <span class="sr-only">{{ t.socials.qq }}</span>
+        <span class="sr-only">{{ t.socials.qq }} - {{ network[1] }}</span>
       </a>
     </li>
   {%- endif -%}

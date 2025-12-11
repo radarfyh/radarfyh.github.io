@@ -1,5 +1,6 @@
 ---
 layout: page
+language: en
 title: About me
 subtitle: We help customers achieve digital transformation by providing professional, reliable, and efficient services.
 ---

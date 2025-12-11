@@ -1,6 +1,7 @@
 ---
 layout: page
-title: CRM System Introduction
+language: zh
+title: 客户关系管理系统介绍
 subtitle: Data-driven decisions, lasting customer relationships!
 ---
 

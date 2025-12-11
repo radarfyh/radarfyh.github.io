@@ -1,5 +1,6 @@
 ---
 layout: page
+language: en
 title: OA System Introduction
 subtitle: Automate routine tasks, focus on core business! Break down silos, collaborate seamlessly!
 ---

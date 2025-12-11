@@ -1,5 +1,6 @@
 ---
 layout: post
+language: en
 title: Best Practices for Building Custom AI Agents
 subtitle: Custom AI agents offer lots of applications across different business sectors, promising to revolutionize operations and workflow
 cover-img: /assets/img/flower.jpg
@@ -7,6 +8,8 @@ thumbnail-img: /assets/img/agent2.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
 author: Feng Yonghua
+permalink: /en/2025-04-02-Best-Practices-for-Building-Custom-AI-Agents/
+categories: en
 ---
 
 ## Best Practices for Building Custom AI Agents 

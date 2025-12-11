@@ -1,12 +1,14 @@
 ---
 layout: post
-title: How to Build a Custom AI Agent
+language: zh
+title: 怎么构建一个优良的人工智能工作引擎
 subtitle: AI agents are transforming industries by automating tasks, analyzing data, and making intelligent decisions
 cover-img: /assets/img/flower.jpg
 thumbnail-img: /assets/img/agent1.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
 author: Feng Yonghua
+permalink: /zh/2025-04-06-How-to-Build-a-Custom-AI-Agent/
 ---
 
 AI agents are transforming industries by automating tasks, analyzing data, and making intelligent decisions. Whether for customer support, data analytics, or real-time decision-making, building a custom AI agent requires a strategic approach. This guide walks you through the essential steps to develop a robust AI agent tailored to your needs.

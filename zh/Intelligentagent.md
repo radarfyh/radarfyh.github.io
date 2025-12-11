@@ -1,6 +1,7 @@
 ---
 layout: page
-title: Intelligent agent
+language: zh
+title: 智慧自动软件机器人
 subtitle: Custom AI agents tailored for your business growth with intelligent automation!
 ---
 

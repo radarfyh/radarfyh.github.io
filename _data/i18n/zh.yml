@@ -1,0 +1,48 @@
+# 网站通用文本
+site:
+  title: "智能软件开发服务"
+  author: "冯永华"
+  url_pretty: "重庆猎讯信息技术有限公司"
+  rss_description: "智能代理、CRM系统和OA系统的最新动态"
+  keywords: "智能代理, CRM系统, OA系统, 人工智能, 大语言模型, 定制软件"
+
+# 导航栏
+navbar:
+  services: "服务项目"
+  intelligent_agent: "智能代理"
+  crm_system: "CRM系统"
+  oa_system: "OA系统"
+  join_us: "加入我们"
+  about_me: "关于我"
+  search: "搜索"
+  language_switcher: "EN"
+
+# 首页
+home:
+  title: "定制化 · 自动化 · 创新"
+  subtitle: "我们专注于数字化转型解决方案，基于大语言模型，致力于为客户提供高质量的OA和CRM软件定制服务。"
+
+# 关于我页面
+about:
+  title: "关于我"
+  subtitle: "我们通过提供专业、可靠、高效的服务，帮助客户实现数字化转型。"
+  content: |
+    我叫冯永华，我带领一个软件开发团队，致力于通过提供专业、可靠、高效的服务，帮助客户实现数字化转型。
+
+    - 目前，我们主要专注于办公自动化软件和客户关系管理（CRM）软件的智能化和定制化开发。特别是，我们利用大语言模型（LLM）代理来增强这些系统的智能性
+    - 这使我们能够在整个生命周期中协助客户——从设计、开发、测试到交付、运营、维护和最终验收——进行动态跟踪和优化
+
+    您还需要什么？
+  story_title: "我的故事"
+  story_content: |
+    说实话，我现在有点记不清了，所以您为什么不直接观看[智能代理](https://en.wikipedia.org/wiki/Intelligent_agent)，它会回答您**所有**的问题。
+
+# 页脚
+footer:
+  copyright: "© 2024 重庆猎讯信息技术有限公司 版权所有"
+
+# 语言切换
+language:
+  en: "English"
+  zh: "中文"
+  switch: "语言"

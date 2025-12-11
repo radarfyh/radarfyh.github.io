@@ -1,12 +1,14 @@
 ---
 layout: post
-title: Building Custom AI Agents for Your Business
+language: zh
+title: 如何把个性化人工智能引擎用于你的业务中
 subtitle: Leverage AI to automate complex workflows and decision-making processes
 cover-img: /assets/img/flower.jpg
 thumbnail-img: /assets/img/hunting-info-services-20250408-en_05.png
 share-img: /assets/img/flower.jpg
 tags: [agent, ai, workflow, knowledge-base]
 author: Feng Yonghua
+permalink: /zh/2025-04-03-building-custom-ai-agents/
 ---
 Custom AI Agents are intelligent systems designed to perform specific tasks autonomously, combining machine learning models, business rules, and workflow automation.
 

@@ -1,5 +1,6 @@
 ---
 layout: post
+language: en
 title: Smart OA system—work efficiently, collaborate effortlessly!
 subtitle: Achieve end-to-end management from leads to payments
 cover-img: /assets/img/flower.jpg
@@ -7,6 +8,7 @@ thumbnail-img: /assets/img/oaprofile.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
 author: Feng Yonghua
+permalink: /en/2025-04-05-standard-oa-product/
 ---
 ## **Traditional Office Work is at a Turning Point:**  
 Driven by the wave of digital transformation, conventional organizational management is undergoing profound changes. With the surge in demand for remote collaboration, intelligent operations, and paperless workflows, outdated hierarchical structures, paper-based processes, and fragmented teamwork can no longer meet the needs of efficient operations—especially in cross-departmental coordination and workflow management.  

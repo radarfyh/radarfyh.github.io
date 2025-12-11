@@ -18,12 +18,16 @@ common-js:
 ---
 
 <!DOCTYPE html>
-<html lang="{{ page.language | default: site.language | default: 'en' }}">
+<!-- <html lang="{{ page.language | default: site.default_lang | default: 'en' }}" t="{{site.data.i18n[lang]}}"> -->
+<html>
 <!-- Beautiful Jekyll 6.0.1 | Copyright Dean Attali 2023 -->
 {% include head.html %}
 
 <body>
   {% include gtm_body.html %}
+
+  {% assign lang = page.language | default: page.lang | default: site.default_lang | default: 'zh' %}
+  {% assign t = site.data.i18n[lang] %}
 
   {% include nav.html %}
 

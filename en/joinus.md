@@ -1,5 +1,6 @@
 ---
 layout: page
+language: en
 title: Join us
 subtitle: We are looking for talented developers, testers, and partners.
 ---

@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
 
   {%- if site.title-img -%}
-    <a class="navbar-brand navbar-brand-logo" href="{{ '/' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
+    <a class="navbar-brand navbar-brand-logo" href="/{{ lang }}{{ '/' | absolute_url }}"><img alt="{{ t.site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
   {%- elsif site.title -%}
-    <a class="navbar-brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+    <a class="navbar-brand" href="/{{ lang }}{{ '/' | absolute_url }}">{{ t.site.title }}</a>
   {%- endif -%}
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,28 +13,54 @@
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
       {%- for link in site.navbar-links -%}
+        {%- assign key = link[0] -%}
+        {%- assign value = link[1] -%}
         {%- if link[1].first %}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ t.navbar[key] }}
+            </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
               {%- for childlink in link[1] -%}
                 {%- for linkparts in childlink %}
-                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
+                  {%- assign subkey = linkparts[0] -%}
+                  {%- assign suburl = linkparts[1] -%}
+                  <a class="dropdown-item" href="/{{ lang }}{{ suburl | relative_url }}">
+                    {{ t.navbar[subkey] }}
+                  </a>
                 {%- endfor -%}
               {%- endfor %}
             </div>
           </li>
         {% else %}
           <li class="nav-item">
-            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
+            <a class="nav-link" href="/{{ lang }}{{ value | relative_url }}">
+              {{ t.navbar[key] }}
+            </a>
           </li>
         {%- endif -%}
       {%- endfor -%}
+
+      <!-- language switch -->
+      {% if lang == "zh" %}
+        <li class="nav-item">
+          <a class="nav-link" id="nav-language-link" href="/en/">
+            <span id="nav-language-text"> {{ t.language.en }}</span>
+          </a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" id="nav-language-link" href="/zh/">
+            <span id="nav-language-text"> {{ t.language.zh }}</span>
+          </a>
+        </li>
+      {% endif %}
+
       {% if site.post_search %}
         <li class="nav-item">
-          <a class="nav-link" id="nav-search-link" href="#" title="Search">
+          <a class="nav-link" id="nav-search-link" href="#" title="{{ t.navbar.search }}">
             <span id="nav-search-icon" class="fa fa-search"></span>
-            <span id="nav-search-text">Search</span>
+            <span id="nav-search-text">{{ t.navbar.search }}</span>
           </a>
         </li>
       {%- endif -%}

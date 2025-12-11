@@ -1,5 +1,6 @@
 ---
 layout: post
+language: en
 title: Understanding Custom AI Agents
 subtitle: Build Custom AI Agents for Autonomous Operations
 cover-img: /assets/img/flower.jpg
@@ -7,6 +8,8 @@ thumbnail-img: /assets/img/agent3.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
 author: Feng Yonghua
+permalink: /en/2025-04-01-Understanding-Custom-AI-Agents/
+categories: en, agent
 ---
 
 In the swiftly changing realm of artificial intelligence (AI), the emergence of personalized AI agents has become more widespread. These agents, capable of performing tasks, making decisions, and even interacting with users, are at the forefront of innovation across various industries.

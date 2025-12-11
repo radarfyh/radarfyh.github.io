@@ -5,6 +5,8 @@ site:
   url_pretty: "Hunting Info Co. Ltd."
   rss_description: "Latest updates on Intelligent Agents, CRM System, and OA System"
   keywords: "Intelligent Agent, CRM System, OA System, AI, LLM, Custom Software"
+  home: "Home"
+  icp_license: "ICP License: CQ-ICP-2025055845"
 
 # 导航栏
 navbar:
@@ -46,3 +48,33 @@ language:
   en: "English"
   zh: "中文"
   switch: "Language"
+
+# 博客文章相关文本
+posts:
+  read_more: "[Read more]"
+  back_to_home: "Back to Home"
+  by: "By "
+  posted_on: "Posted on "
+  tags: "Tags: "
+  categories: "Categories"
+  no_posts: "No posts available"
+  previous_post: "Previous Post"
+  next_post: "Next Post"
+  newer_posts: "Newer Posts"
+  older_posts: "Older Posts"
+
+# 社交媒体链接
+socials:
+  github: "GitHub"
+  linkedin: "LinkedIn"
+  twitter: "X(Twitter)"
+  facebook: "Facebook"
+  instagram: "Instagram"
+  weibo: "Weibo"
+  wechat: "WeChat"
+  rss: "RSS"
+  email: "Email me"
+  telegram: "Telegram"
+  phone: "Phone"
+  whatsapp: "WhatsApp"
+  qq: "QQ"

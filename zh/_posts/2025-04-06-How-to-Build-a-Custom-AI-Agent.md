@@ -2,134 +2,117 @@
 layout: post
 language: zh
 title: 怎么构建一个优良的人工智能工作引擎
-subtitle: AI agents are transforming industries by automating tasks, analyzing data, and making intelligent decisions
+subtitle: AI Agent 正在通过自动化任务、分析数据和做出智能决策来重塑各行业
 cover-img: /assets/img/flower.jpg
 thumbnail-img: /assets/img/agent1.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
 author: Feng Yonghua
 permalink: /zh/2025-04-06-How-to-Build-a-Custom-AI-Agent/
+categories: zh
 ---
 
-AI agents are transforming industries by automating tasks, analyzing data, and making intelligent decisions. Whether for customer support, data analytics, or real-time decision-making, building a custom AI agent requires a strategic approach. This guide walks you through the essential steps to develop a robust AI agent tailored to your needs.
+AI Agent 正在通过自动化任务、数据分析和智能决策来改变各行各业的运营方式。无论是用于客户支持、数据分析，还是实时决策，一个优良的定制化 AI Agent 都需要系统化的构建方法。本指南将引导你完成关键步骤，帮助你打造一个稳健且符合需求的 AI Agent。
 
-## Step 1 - Define the Objectives
+## 第一步：明确目标
 
-Before development begins, clearly define your AI agent’s purpose and tasks. Will it provide personalized recommendations, automate workflows, or assist users with queries? Setting well-defined objectives helps guide architecture and functionality decisions.
+在开始开发之前，必须清晰定义 AI Agent 的目标与任务。它是用于提供个性化推荐、自动化业务流程，还是处理用户咨询？明确的目标可以指导架构与功能的设计决策。
 
-## Step 2 - Gather and Prepare Data
+## 第二步：收集并准备数据
 
-Quality data is the foundation of an effective AI agent. Collect relevant datasets such as text, images, audio, or structured information, depending on your agent’s use case. Ensure diversity and accuracy for improved training outcomes.
+高质量的数据是有效 AI Agent 的基础。根据应用场景，收集相关的数据集——文本、图像、音频或结构化信息。数据越多样、越准确，训练效果越好。
 
-## Step 3 - Choose the Right LLM and AI Technologies
+## 第三步：选择合适的 LLM 与 AI 技术
 
-Not all large language models (LLMs) are equal. Selecting the right AI tools ensures optimal performance:
+不同的大语言模型（LLM）能力差异巨大，选择正确的技术至关重要：
 
-  - Choose an LLM that excels in reasoning benchmarks.
+- 选择推理能力强、基准测试表现优异的模型  
+- 支持 Chain-of-Thought（CoT）提示增强决策能力  
+- 输出结果要稳定、一致  
 
-  - Support chain-of-thought (CoT) prompting for better decision-making.
-
-  - Ensure consistent and reliable outputs.
+通过尝试不同的模型与提示词，持续提升推理能力。
 
 
-```
-Experiment with different models and fine-tune prompts to enhance reasoning capabilities.
-```
+## 第四步：设计 AI Agent 的控制逻辑
 
-## Step 4 - Design the AI Agent’s Control Logic
+AI Agent 必须基于可控的逻辑运作：
 
-Your AI agent must operate based on defined logic:
+- 工具调度：仅在必要时调用外部工具  
+- 基础反思：生成、复盘、优化响应  
+- ReAct（推理 + 行动）：规划、执行、观察、迭代  
+- 计划再执行：先制定完整计划，再执行  
 
-  - Tool Use: Calls external tools only when necessary.
-
-  - Basic Reflection: Generates, critiques, and refines responses.
-
-  - ReAct (Reasoning + Acting): Plans, executes, observes, and iterates.
-
-  - Plan-then-Execute: Structures all steps before execution.
-
-Choosing the right approach improves the agent’s reasoning and reliability.
+选择合适的控制方法可以提升 AI Agent 的可靠性与推理质量。
 
 ![ai agent](/assets/img/agent1.png)
 
-## Step 5 - Define Core Instructions & Features
+## 第五步：定义核心指令与功能
 
-Set operational rules to guide the AI agent’s interactions:
+通过系统规则来规范 AI Agent 的行为：
 
-  - How should it handle unclear queries? (Ask clarifying questions.)
+- 如何应对不明确的问题？（例如：提出澄清问题）  
+- 何时应调用外部工具？  
+- 应输出什么格式？（Markdown、JSON 等）  
+- 应采用什么交互风格？（正式、对话式、结构化等）  
 
-  - When should it use external tools?
+清晰的系统提示可以确保输出稳定且结构化。
 
-  - What output formats should it follow? (Markdown, JSON, etc.)
+## 第六步：实现记忆策略
 
-  - What should its interaction style be? (Formal, conversational, structured.)
+LLM 本身不具备长期记忆，因此需自行设计记忆机制：
 
-Clear system prompts help shape predictable and structured behavior.
+- **滑动窗口记忆**：保留最近对话内容  
+- **摘要记忆**：将长期对话压缩为关键摘要  
+- **长期偏好记忆**：存储用户偏好以实现个性化  
 
-## Step 6 - Implement a Memory Strategy
+`示例：某金融类 AI Agent 会记住用户此前的风险偏好，以提供更准确的建议。`
 
-LLMs don’t inherently remember past interactions, so implementing a memory strategy is crucial:
+## 第七步：为 AI Agent 配备工具与 API
 
-  - Sliding Window: Retains recent exchanges while discarding older ones.
+通过集成外部工具来扩展其能力：
 
-  - Summarized Memory: Condenses key takeaways from conversations.
+- 名称：清晰易懂（如 “StockPriceRetriever”）  
+- 描述：说明功能和行为  
+- Schema：定义输入与输出格式  
+- 错误机制：处理失败场景  
 
-  - Long-Term Memory: Stores user preferences for personalized responses.
+示例：客户支持 AI 可从 CRM API 获取订单信息。
 
-`A financial AI agent recalls a user’s risk tolerance from previous interactions.`
+## 第八步：定义 AI Agent 的角色与关键任务
 
-## Step 7 - Equip the AI Agent with Tools & APIs
+明确的角色有助于提升执行效率：
 
-To expand its capabilities, integrate external tools:
+- **使命**（如：“我分析金融数据并生成洞察。”）  
+- **核心任务**（总结、可视化、分析等）  
+- **限制条件**（如：“我不提供法律建议。”）  
 
-  - Name: Clearly defined and intuitive (e.g., “StockPriceRetriever”).
+示例：金融类 Agent 会只处理财务分析，不会讨论不相关主题。
 
-  - Description: Explains functionality and expected behavior.
+## 第九步：处理原始 LLM 输出
 
-  - Schemas: Defines structured input/output formats.
+对 AI 输出进行后处理可确保结构化和准确性：
 
-  - Error Handling: Manages tool failures effectively.
+- 将输出转换为结构化格式（JSON、表格、图表）  
+- 在展示前验证结果的正确性  
+- 确保工具的执行结果有效  
 
-Example: A customer support AI retrieves order details from a CRM API.
+示例：某金融 Agent 会将分析结果转换为结构化 JSON 格式。
 
-## Step 8 - Define the AI Agent’s Role & Key Tasks
+## 第十步：扩展到多 Agent 系统（高级）
 
-A well-defined role enhances efficiency. Clearly state:
+复杂流程往往需要多个 AI Agent 协同工作。需考虑：
 
-  - Mission: (e.g., “I analyze financial data to generate insights.”)
+- **信息共享**：定义 Agent 之间的上下文共享方式  
+- **错误处理**：提供失败回退机制  
+- **状态管理**：支持任务暂停与恢复  
 
-  - Key Tasks: (Summarizing, visualizing, analyzing.)
+示例：  
+一个 Agent 获取原始数据；  
+另一个 Agent 负责总结；  
+第三个 Agent 生成最终报告。
 
-  - Limitations: (e.g., “I do not provide legal advice.”)
+## 集成、部署与持续优化
 
-Example: A finance-focused AI sticks to financial insights and avoids unrelated topics.
+完成开发后，将 AI Agent 集成到实际系统中，确保与现有工作流和界面兼容。持续监控其表现，根据用户反馈与业务变化不断迭代优化，从而提升性能和稳定性。
 
-## Step 9 - Handling Raw LLM Outputs
-
-Post-processing ensures structured, accurate responses:
-
-  - Convert AI output into structured formats (JSON, tables, charts).
-
-  - Validate correctness before delivering responses.
-
-  - Ensure proper execution of external tools.
-
-Example: A financial AI extracts data and formats it into a structured JSON file.
-
-## Step 10 - Scaling to Multi-Agent Systems (Advanced)
-
-For complex workflows, multiple AI agents can collaborate. Consider:
-
-  - Information Sharing: Define how agents communicate and share context.
-
-  - Error Handling: Plan for failures and fallback strategies.
-
-  - State Management: Enable task pausing and resumption.
-
-Example: One agent fetches raw data, Another agent summarizes it, A third generates a final report
-
-## Integrate, Deploy, and Continuously Improve
-
-Once built, integrate your AI agent into its target environment, ensuring compatibility with existing systems and user interfaces. Monitor its performance, gather user feedback, and refine it through iterative improvements to enhance efficiency and reliability.
-
-By following these steps, you can build AI agents that are intelligent, efficient, and adaptable for various business applications. 
+通过遵循这些步骤，你可以构建出智能、高效、可靠的 AI Agent，让其更好地服务于各种业务应用。

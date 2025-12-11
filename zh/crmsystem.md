@@ -2,91 +2,89 @@
 layout: page
 language: zh
 title: 客户关系管理系统介绍
-subtitle: Data-driven decisions, lasting customer relationships!
+subtitle: 数据驱动决策，构建持久客户关系！
 ---
 
-Our AI-powered CRM system is the growth engine for modern businesses, delivering three core capabilities:
-- 360° Customer Profile - Unified communication history, transactions & behavioral data for precision insights
-- Sales Automation - End-to-end automation from lead assignment to deal closure, boosting conversions by 40%
-- Data-Driven Decisions - Real-time dashboards identify high-value clients and emerging risks
+我们的AI驱动CRM系统是现代企业的增长引擎，提供三大核心能力：
+- **360°客户全景视图** - 统一沟通记录、交易数据与行为轨迹，实现精准洞察
+- **销售流程自动化** - 从线索分配到交易达成的端到端自动化，转化率提升40%
+- **数据驱动决策** - 实时仪表盘识别高价值客户与潜在风险
 
+## 传统行业的业务结构、商业模式与盈利机制变革
 
-## The Transformation of Business Structures, Commercial Models, and Profit Mechanisms in Traditional Industries
+- 在云计算、大数据、移动化、社交媒体等互联网技术冲击下，传统行业的业务结构、商业模式与盈利机制发生了深刻变化——尤其是企业与客户的互动方式
+- 陈旧的客户接触与管理方式已变得低效过时，导致以下普遍挑战：
+  - **缺乏科学合理的销售资源分配与客户归属机制**
+    - 直销与渠道之间，甚至同一团队销售代表内部因无有效冲突解决流程而产生矛盾
+    - 客户归属判定无统一标准，导致多团队重复接触同一客户，引发客户反感与不满
+  - **缺乏有效跟进体系，客户留存率低下**
+    - 企业仅掌握基础客户资料，多数交易为一次性买卖
+    - 销售离职即流失客户资源，客户信息跨部门/产品线交接时，新人员因历史细节缺失难以接续，造成用户体验不佳
+  - **客户资源利用率低**
+    - 无完整生命周期数据，企业无法通过重复触达最大化客户价值
+    - 管理者无法掌握跟进过程，导致运营不透明，客户流失原因不明
 
-- Under the impact of internet technologies such as cloud computing, big data, mobile, and social media, traditional industries have undergone significant changes in their business structures, commercial models, and profit mechanisms—particularly in how enterprises interact with their customers.
+## 数据驱动智能营销兴起，价值营销成为新标准
 
-- The old methods of customer engagement and management have become inefficient and outdated, leading to common challenges such as:
-  - **Lack of a Scientific and Rational Sales Resource Allocation & Customer Ownership Mechanism**
-    - Internal conflicts between direct sales and channel partners, or even among sales reps within the same team, due to no effective conflict resolution process
-    - No unified standard for determining customer ownership, leading to multiple teams repeatedly approaching the same client, causing customer fatigue and dissatisfaction
-  - **Absence of an Effective Follow-Up System, Leading to Poor Customer Retention**
-    - Companies possess only basic customer data, with most deals being one-time transactions
-    - Customer resources are lost when sales reps leave, and when client information is transferred across departments or product lines, new personnel struggle to pick up the thread due to missing historical details, resulting in poor user experience
-  - **Low Utilization of Customer Resources**
-    - No complete lifecycle data prevents companies from maximizing customer value through repeat engagement
-    - Managers lack visibility into follow-up processes, leading to opaque operations and unexplained customer attrition
+**营销智能化与数字化**：可量化、可测试、可分析、可预测、可衡量——CRM已从基础客户管理工具进化为**精益化、数据驱动的商业平台**
 
-## The Rise of Data-Driven Intelligent Marketing Makes Value-Based Marketing the New Standard
+- **1. M2L - 营销获客**
+  - 全渠道营销（线上+线下）
+  - 行为数据捕获与标签化
+  - 自动化营销工作流
 
-  **Marketing Intelligence & Digitalization:** Quantifiable, testable, analyzable, predictable, and measurable—CRM has evolved from a basic customer management tool into a **lean, data-driven business platform**
+- **2. L2O - 线索培育**
+  - 自动化线索去重
+  - 智能线索评分
+  - 自动化培育流程
 
-  - **1. M2L - Marketing to Leads**  
-    - Omnichannel marketing (online & offline)  
-    - Behavioral data capture & tagging  
-    - Automated marketing workflows  
+- **3. L2O - SDR线索跟进**
+  - 电话销售工作区
+  - 互动行为追踪
+  - 智能线索分配
 
-  - **2. L2O - Lead to Opportunity**  
-    - Automated lead deduplication  
-    - Intelligent lead scoring  
-    - Automated nurturing  
+- **4. L2O - 销售转化**
+  - 线索转商机
+  - 客户留存追踪
+  - 自动化线索回收
 
-  - **3. L2O - SDR Lead Engagement**  
-    - Tele-sales workspace  
-    - Interaction behavior tracking  
-    - Smart lead distribution  
+- **5. O2C - 商机转化**
+  - 结构化销售管道
+  - CPQ（配置-报价-审批）
+  - 赢单/丢单分析
 
-  - **4. L2O - Sales Conversion**  
-    - Lead-to-deal conversion  
-    - Customer retention tracking  
-    - Automated lead recycling  
+- **6. I2R - 交易达成**
+  - 交易治理规则
+  - 合同管理
+  - 订单履行
 
-  - **5. O2C - Opportunity to Customer**  
-    - Structured sales pipeline  
-    - CPQ (Configure-Price-Quote)  
-    - Win/loss analysis  
+- **7. CSM - 客户成功管理**
+  - 一体化客户服务
+  - 长期价值实现
+  - 客户推荐与复购
 
-  - **6. I2R - Deal Closing**  
-    - Deal governance rules  
-    - Contract management  
-    - Order fulfillment  
+![CRM系统功能架构](/assets/img/hunting-info-services-20250408-en_12.png)
 
-  - **7. CSM - Customer Success Management**  
-    - Integrated customer service  
-    - Long-term value realization  
-    - Advocacy & repeat purchasing  
+## **CRM的核心价值**
 
-![the features of the CRM system](/assets/img/hunting-info-services-20250408-en_12.png)
+帮助企业打破内部信息孤岛，整合各部门原先零散的客户数据，实现跨职能协同运作——同时提升运营效率与经济效益。主要价值包括：
 
-## **The Value of CRM:**  
+1. **降低获客成本**
+2. **缩短销售周期**
+3. **提高客户留存率**
+4. **提升成交胜率**
+5. **增加销售转化率**
 
-Helps enterprises break down internal information silos, consolidate previously fragmented customer data across departments, and align cross-functional operations—boosting both operational efficiency and economic performance. Key benefits include:  
+**传统客户管理的局限：**
+- 手工重复的销售流程
+- 依赖销售个人主动性进行客户触达
+- 销售人员离职即流失客户
+- 过度依赖个人表现
 
-  1. **Lower customer acquisition costs**  
-  2. **Shortened sales cycles**  
-  3. **Higher customer retention rates**  
-  4. **Improved deal win rates**  
-  5. **Increased sales conversion rates**  
+**现代CRM系统的优势：**
+- **自动化营销**——高效易用
+- **AI驱动的客户互动提醒**
+- **集中化客户数据存储**
+- **标准化的团队销售流程**
 
-**Limitations of Traditional Customer Management:**  
-  - Manual, repetitive sales processes  
-  - Reliance on individual sales reps' initiative for client outreach  
-  - Customer loss when sales personnel leave  
-  - Over-dependence on individual performance  
-
-**Advantages of Modern CRM Systems:**  
-  - **Automated marketing** – efficient and user-friendly  
-  - **AI-powered client engagement reminders**  
-  - **Centralized customer data storage**  
-  - **Standardized team sales processes**  
-  
-![the values of the CRM system](/assets/img/hunting-info-services-20250408-en_11.png)
+![CRM系统价值体现](/assets/img/hunting-info-services-20250408-en_11.png)

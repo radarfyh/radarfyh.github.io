@@ -2,51 +2,51 @@
 layout: post
 language: zh
 title: AI自动化工作流程介绍
-subtitle: Build Custom AI Agents for Autonomous Operations
+subtitle: 构建定制化AI智能体，实现自主化运营
 cover-img: /assets/img/flower.jpg
 thumbnail-img: /assets/img/agent3.png
 share-img: /assets/img/flower.jpg
 tags: [oa, management, productivity, efficiency]
-author: Feng Yonghua
+author: 冯永华
 permalink: /zh/2025-04-01-Understanding-Custom-AI-Agents/
 categories: zh, agent
 ---
 
-In the swiftly changing realm of artificial intelligence (AI), the emergence of personalized AI agents has become more widespread. These agents, capable of performing tasks, making decisions, and even interacting with users, are at the forefront of innovation across various industries.
+在人工智能（AI）日新月异的领域中，定制化AI智能体的出现已日益普遍。这些能够执行任务、做出决策甚至与用户交互的智能体，正引领着各行各业的创新浪潮。
 
-From virtual assistants to chatbots and game characters, custom AI agents are revolutionizing how we interact with technology. In this comprehensive guide, we'll delve into the process of building a custom AI agent from concept to implementation, exploring the key steps, considerations, and best practices involved.
+从虚拟助手到聊天机器人，再到游戏角色，定制化AI智能体正在彻底改变我们与技术互动的方式。在这份全面的指南中，我们将深入探讨从概念到实现构建一个定制化AI智能体的全过程，解析其中的关键步骤、注意事项以及最佳实践。
 
-## Understanding Custom AI Agents 
+## 理解定制化AI智能体
 
-Before diving into the development process, it's crucial to understand what a custom AI agent entails. Custom AI agents are like your personalized digital assistants, but smarter and tailored specifically to your needs. They're designed to help you with tasks, answer questions, and even just chat with you. Unlike generic assistants, these agents learn from your interactions with them, becoming more useful and relatable over time. You can use them for various purposes, from organizing your schedule to managing your finances. They're continuously learning and improving, just like a good friend, making them invaluable companions in your digital life. 
+在深入开发过程之前，理解什么是定制化AI智能体至关重要。定制化AI智能体就像是您专属的数字助手，但更智能，且专门根据您的需求量身打造。它们旨在帮助您处理任务、回答问题，甚至与您聊天。与通用助手不同，这些智能体从您与它们的互动中学习，随着时间的推移变得更有用、更贴心。您可以将它们用于各种目的，从安排日程到管理财务。它们像一位益友般持续学习和改进，成为您数字生活中不可或缺的伙伴。
 
-## The Connection Between AI Agents and Blockchain  
+## AI智能体与区块链的联系
 
-First, it’s essential to understand how AI agents actually operate—this helps us identify which crypto projects genuinely fall under the scope of AI agents and which are merely riding the hype.  
+首先，必须理解AI智能体实际如何运作——这有助于我们辨别哪些加密项目真正属于AI智能体的范畴，哪些只是炒作概念。
 
-Bots in the GPT Store might give people an intuitive sense of AI agents, but in principle, what kind of product qualifies as one?  
-The author believes that determining whether a product is an AI agent boils down to one key question:  
-*"Is it a program or device that uses AI technology to autonomously execute tasks or assist users?"*  
+GPT商店中的机器人或许能让人直观感受到AI智能体，但原则上，什么样的产品才算得上是AI智能体呢？
+笔者认为，判断一个产品是否为AI智能体，可以归结为一个核心问题：
+*"它是否是一个利用AI技术自主执行任务或辅助用户的程序或设备？"*
 
-From simple chatbots to complex automated systems, all can be considered AI agents—but they must meet at least the following criteria:  
-- **Automation**: Capable of performing tasks with little to no human intervention.  
-- **Environmental Perception**: Able to sense its operational environment via sensors or data input.  
-- **Decision-Making**: Can make decisions based on its programming and incoming data.  
-- **Learning & Adaptation**: Possesses learning capabilities to improve performance based on new data and experience.  
-- **Interactivity**: Can engage with human users or other systems, responding to requests or providing information.  
+从简单的聊天机器人到复杂的自动化系统，都可以被视为AI智能体——但它们必须至少满足以下标准：
+- **自动化**：能够在极少或无需人工干预的情况下执行任务。
+- **环境感知**：能够通过传感器或数据输入感知其运行环境。
+- **决策能力**：能够根据其编程和输入数据做出决策。
+- **学习与适应**：具备学习能力，能基于新数据和经验提升性能。
+- **交互性**：能够与人类用户或其他系统互动，响应请求或提供信息。
 
-![The simple process of an AI agent](/assets/img/agent3.png)
+![AI智能体的简单流程](/assets/img/agent3.png)
 
-If we abstract these features, we might notice that AI agents somewhat resemble Ethereum smart contracts:  
-*"Given preset conditions, execute outcomes automatically."*  
+如果我们抽象出这些特征，可能会注意到AI智能体在某种程度上类似于以太坊智能合约：
+*"在预设条件下，自动执行结果。"*
 
-So, to distinguish whether a project is genuinely leveraging AI agents or just repackaging smart contracts with AI buzzwords, we can focus on one key dimension:  
-*"Does it exhibit agency?"*  
+因此，要区分一个项目是真正利用了AI智能体，还是仅仅用AI热词包装了智能合约，我们可以关注一个关键维度：
+*"它是否展现出自主性？"*
 
-**Smart contracts lack autonomy**—they are purely *reactive*, operating only based on pre-written rules without the ability to make independent decisions in response to environmental changes.  
-*Example: "You set a specific price to buy a token at a predetermined time."*  
+**智能合约缺乏自主性**——它们纯粹是*反应式*的，仅基于预先编写的规则运行，无法根据环境变化做出独立决策。
+*示例："您在预定时间以特定价格买入代币。"*
 
-In contrast, **AI agents are typically *active***—they can gather data, learn, make decisions, and initiate tasks without external commands.  
-*Example: "Monitor market data and buy a token at a price the AI deems optimal for profit."*  
+相比之下，**AI智能体通常是*主动式*的**——它们能够收集数据、学习、决策并主动发起任务，无需外部指令。
+*示例："监控市场数据，并在AI认为能实现盈利的最优价格买入代币。"*
 
-This distinction clarifies whether a project is truly AI-driven or just smart contract automation with an AI label.
+这一区别清晰地表明了一个项目是真正由AI驱动，还是仅仅贴了AI标签的智能合约自动化。

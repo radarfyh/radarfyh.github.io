@@ -2,80 +2,76 @@
 layout: page
 language: zh
 title: 协同办公系统介绍
-subtitle: Automate routine tasks, focus on core business! Break down silos, collaborate seamlessly!
+subtitle: 自动化日常事务，专注核心业务！打破信息孤岛，实现无缝协作！
 ---
 
-Our intelligent OA system serves as the central engine for business efficiency, delivering three core values:
+我们的智能OA系统是企业效率提升的核心引擎，提供三大核心价值：
 
-- Process Automation - Handles repetitive tasks like approvals/reimbursements, reducing human errors by 90%
-- Cross-team Collaboration - Unifies IM/email/project tools for real-time enterprise-wide communication
-- Mobile Workplace - Multi-device access accelerates response times by 60%
+- **流程自动化** - 处理审批/报销等重复性工作，减少90%人为差错
+- **跨团队协作** - 统一IM/邮件/项目工具，实现企业级实时沟通
+- **移动化办公** - 多终端访问，响应速度提升60%
 
-
-![the core value of OA systems](/assets/img/hunting-info-services-20250408-en_17.png)
-
-
----
-
-### **Pain Points of Traditional Office Models**  
-- **Manual workflows**: Approvals rely on paper/offline communication, leading to redundant tasks.  
-- **Over-reliance on individual experience**: Inconsistent task allocation and follow-up with no standardization.  
-- **Information loss**: Files stored haphazardly, causing critical data gaps during personnel changes.  
-- **Inefficient management**: Decisions based on intuition rather than data, resulting in process inefficiencies.  
-
-### **Advantages of Intelligent OA Systems**  
-- **Automated workflows**: Smart approval routing reduces manual intervention, boosting efficiency by 50%+.  
-- **Standardized collaboration**: Automated task assignment, reminders, and tracking to eliminate delays and oversights.  
-- **Centralized knowledge management**: Unified document storage with full traceability, enabling faster onboarding.  
-- **Data-driven decision-making**: Real-time dashboards identify bottlenecks for precise management adjustments.  
-
-## **Standard OA Solution – The Digital Collaboration Trend Makes Efficient Management Possible**  
-**Digital Management**: Traceable, Collaborative, Optimizable, Predictive, Decision-Ready  
-
-The OA system evolves from a basic office tool to an intelligent, enterprise-wide management platform, covering five core modules: Administration, Human Resources, Project Management, Training, and Finance. The solution includes the following 8 key functions:  
-
-
-![the standard OA solution](/assets/img/hunting-info-services-20250408-en_18.png)
-
+![OA系统核心价值](/assets/img/hunting-info-services-20250408-en_17.png)
 
 ---
 
-### **1. A2A – Administrative Affairs Management**  
-(1) **Smart Notices & Announcements**: Real-time multi-platform sync with read status tracking  
-(2) **End-to-End Approvals**: E-signature/Mobile approval/Intelligent reminders  
-(3) **Full-Cycle Meeting Management**: Scheduling → Notification → Minutes → Execution  
+### **传统办公模式痛点**
+- **流程手工化**：审批依赖纸质/线下沟通，导致重复劳动
+- **过度依赖个人经验**：任务分配与跟进无标准，执行参差不齐
+- **信息流失严重**：文件存储混乱，人员变动时关键数据断层
+- **管理效率低下**：决策凭直觉而非数据，流程漏洞频现
 
-### **2. H2H – Digital Human Resources**  
-(1) **Org Chart Management**: Visual role-based permission configuration  
-(2) **Smart Attendance**: Multi-mode clock-in/Anomaly auto-alerts  
-(3) **Automated Payroll**: Tax calculation/Encrypted payslip distribution  
+### **智能OA系统优势**
+- **流程自动化**：智能审批路由减少人工干预，效率提升50%+
+- **协作标准化**：自动任务分配、提醒与追踪，杜绝延误与遗漏
+- **知识集中化**：统一文档存储全程可追溯，新人快速上手
+- **决策数据化**：实时仪表盘识别瓶颈，精准管理调整
 
-### **3. P2P – End-to-End Project Control**  
-(1) **Project Initiation**: Online application/Multi-level approval/Resource pre-allocation  
-(2) **Progress Dashboard**: Gantt charts/Milestone alerts/Blockage tracking  
-(3) **Project Knowledge Base**: Version-controlled docs/Cross-team sharing  
+## **标准OA解决方案——数字化协同趋势让高效管理成为可能**
+**数字化管理**：可追溯、可协同、可优化、可预测、可决策
 
-### **4. T2T – Training System Development**  
-(1) **Course Management**: Live & recorded sessions/Credit system/Effectiveness evaluation  
-(2) **Exam Engine**: AI-generated tests/Anti-cheating/Auto-grading  
-(3) **Competency Mapping**: Training data linked to role proficiency models  
+OA系统从基础办公工具进化为智能化企业级管理平台，涵盖行政、人力、项目、培训、财务五大核心模块。解决方案包含以下8大关键功能：
 
-### **5. F2F – Precision Financial Control**  
-(1) **Smart Vouchers**: OCR recognition/Automatic journal entry  
-(2) **Multi-Dimensional Reports**: Cost center/Project/Department drill-down analysis  
-(3) **Automated Accounting**: Reconciliation/Period-end closing/Consolidated statements  
+![标准OA解决方案](/assets/img/hunting-info-services-20250408-en_18.png)
 
-### **6. D2D – Decision Support System**  
-(1) **Executive Dashboard**: Process efficiency/Resource utilization/Cost breakdown visualization  
-(2) **Compliance Alerts**: Real-time flags for budget overruns/Contract expirations/Approval delays  
-(3) **Data Sandbox**: Custom analysis models/Scenario simulation  
+---
 
-### **7. K2K – Knowledge Asset Retention**  
-(1) **Corporate Library**: Tiered permissions/Watermarking/Smart search  
-(2) **Experience Transfer**: Process templates/Best practice cases  
-(3) **Exit Knowledge Handover**: Digital task transition checklists  
+### **1. A2A – 行政事务管理**
+(1) **智能通知公告**：多平台实时同步，已读状态追踪
+(2) **端到端审批流**：电子签章/移动审批/智能提醒
+(3) **全周期会议管理**：预约→通知→纪要→执行闭环
 
-### **8. Prediction & Optimization**  
-(1) **Process Bottleneck Forecasting**: Approval duration/Rejection rate analysis  
-(2) **Labor Cost Modeling**: Headcount optimization/Compensation structure simulation  
-(3) **Training Demand Forecasting**: Skill gap/Course popularity analytics  
+### **2. H2H – 数字化人力资源**
+(1) **组织架构管理**：可视化角色权限配置
+(2) **智能考勤管理**：多模式打卡/异常自动预警
+(3) **自动化薪资核算**：个税计算/加密工资条发放
+
+### **3. P2P – 端到端项目管控**
+(1) **项目立项管理**：在线申请/多级审批/资源预分配
+(2) **进度可视化看板**：甘特图/里程碑预警/阻塞跟踪
+(3) **项目知识库**：版本控制文档/跨团队共享
+
+### **4. T2T – 培训体系构建**
+(1) **课程管理体系**：直播录播课程/学分制/效果评估
+(2) **智能考试引擎**：AI组卷/防作弊/自动阅卷
+(3) **能力画像映射**：培训数据关联岗位胜任力模型
+
+### **5. F2F – 精细化财务管控**
+(1) **智能凭证处理**：OCR识别/自动生成会计分录
+(2) **多维度报表分析**：成本中心/项目/部门穿透分析
+(3) **自动化账务处理**：对账/期末结账/合并报表
+
+### **6. D2D – 决策支持系统**
+(1) **高管驾驶舱**：流程效率/资源利用率/成本构成可视化
+(2) **合规预警机制**：预算超支/合同到期/审批延迟实时标记
+(3) **数据沙箱分析**：自定义分析模型/场景模拟
+
+### **7. K2K – 知识资产留存**
+(1) **企业文库建设**：分级权限/数字水印/智能检索
+(2) **经验传承体系**：流程模板/最佳实践案例库
+(3) **离职知识交接**：数字化任务交接清单
+
+### **8. 预测与优化**
+(1) **流程瓶颈预测**：审批时长/驳回率分析
+(2) **人力成本建模**：人员编制优化/薪酬结构模拟
+(3) **培训需求预测**：技能缺口/课程热度分析

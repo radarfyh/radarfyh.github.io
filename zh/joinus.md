@@ -2,52 +2,50 @@
 layout: page
 language: zh
 title: 加入我们
-subtitle: We are looking for talented developers, testers, and partners.
+subtitle: 诚邀优秀开发者、测试工程师及合作伙伴加入
 ---
 
-## **Partner**
-Join us as a partner to create the future together.
+## **合作伙伴**
+作为合作伙伴加入我们，共同开创未来。
 
-- Participate in strategic planning
-Co-develop company direction and share development benefits.
-- Technical team management
-Responsible for team management and technical architecture design.
-- Equity incentives
-Enjoy equity incentives and grow with the company.
-- Entrepreneurial spirit
-Rich industry experience and technical background with entrepreneurial spirit.
+- **参与战略规划**
+  共同制定公司发展方向，共享发展红利。
+- **技术团队管理**
+  负责团队管理与技术架构设计。
+- **股权激励**
+  享有股权激励，与公司共同成长。
+- **创业精神**
+  具备丰富的行业经验与技术背景，拥有创业精神。
 
-## **Developer**
-We offer abundant R&D career opportunities. Welcome to join our team.
-- Core product development
-Responsible for designing and developing core products.
-- Technical problem solving
-Solve technical challenges to improve system performance and stability.
-- Team collaboration
-Work closely with PMs and designers to implement requirements.
-- Technical requirements
-Proficient in at least one mainstream language (Java, Python, JavaScript, etc.).
+## **开发工程师**
+我们提供丰富的研发岗位机会，欢迎加入我们的技术团队。
+- **核心产品开发**
+  负责核心产品的设计与研发工作。
+- **技术难题攻关**
+  解决技术挑战，提升系统性能与稳定性。
+- **团队协作开发**
+  与产品经理、设计师紧密协作，实现产品需求。
+- **技术要求**
+  至少精通一门主流语言（Java、Python、JavaScript等）。
 
-## **Tester**
-We offer abundant testing career opportunities. Welcome to join our team.
-- Product quality assurance
-Responsible for product testing to ensure quality.
-- Test case writing
-Write test cases and perform functional, performance and automated testing.
-- Issue tracking
-Collaborate with developers to identify and track issues.
-- Technical requirements
-Familiar with testing tools (Selenium, JUnit) and processes.
+## **测试工程师**
+我们提供丰富的测试岗位机会，欢迎加入我们的质量保障团队。
+- **产品质量保障**
+  负责产品测试工作，确保产品质量。
+- **测试用例编写**
+  编写测试用例，执行功能、性能及自动化测试。
+- **问题跟踪管理**
+  与开发人员协作，定位并跟踪问题。
+- **技术要求**
+  熟悉测试工具（Selenium、JUnit）及测试流程。
 
-## **Part-time**
-We offer flexible part-time opportunities. Talented developers are welcome.
-- Project participation
-Participate in development or testing for company projects.
-- Flexible work
-Flexible hours suitable for students or freelancers.
-- Technical requirements
-Solid technical foundation and good communication skills.
-- Career development
-Outstanding performers may become full-time employees.
-
-
+## **兼职岗位**
+我们提供灵活的兼职机会，欢迎有才华的开发者加入。
+- **项目参与**
+  参与公司项目的开发或测试工作。
+- **灵活工作**
+  工作时间灵活，适合在校学生或自由职业者。
+- **技术要求**
+  具备扎实的技术基础与良好的沟通能力。
+- **职业发展**
+  表现优异者有机会转为正式员工。

@@ -2,9 +2,11 @@
 site:
   title: "智能软件开发服务"
   author: "冯永华"
-  url_pretty: "重庆猎讯信息技术有限公司"
+  url_pretty: "重庆狩猎信息技术有限公司"
   rss_description: "智能代理、CRM系统和OA系统的最新动态"
   keywords: "智能代理, CRM系统, OA系统, 人工智能, 大语言模型, 定制软件"
+  home: "首页"
+  icp_license: "ICP许可： 渝ICP备2025055845号"
 
 # 导航栏
 navbar:
@@ -46,3 +48,31 @@ language:
   en: "English"
   zh: "中文"
   switch: "语言"
+
+# 博客文章相关文本
+posts:
+  read_more: "【阅读更多】"
+  back_to_home: "返回首页"
+  by: "作者："
+  posted_on: "发表于："
+  tags: "标签："
+  categories: "分类"
+  no_posts: "暂无文章"
+  previous_post: "上一篇"
+  next_post: "下一篇"
+
+# 社交媒体链接
+socials:
+  github: "GitHub"
+  linkedin: "领英"
+  twitter: "X(Twitter)"
+  facebook: "脸书"
+  instagram: "Instagram"
+  weibo: "微博"
+  wechat: "微信"
+  rss: "RSS"
+  email: "给我们发邮件"
+  telegram: "Telegram"
+  phone: "给我们电话"
+  whatsapp: "WhatsApp"
+  qq: "QQ"

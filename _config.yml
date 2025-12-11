@@ -55,6 +55,8 @@ round-avatar: false
 # You can change the order that they show up on the page by changing the order here.
 # Uncomment the links you want to show and add your information to each one.
 social-network-links:
+  wechat: radar_wind
+  qq: 1509515977
   email: "feng.yonghua@foxmail.com"
   rss: true  # remove this line if you don't want to show an RSS link at the bottom
   facebook: yonghua.feng.3
@@ -253,7 +255,8 @@ page-img: "/assets/img/mybg.png"
 ################
 
 # Ruby Date Format to show dates of posts
-date_format: "%B %-d, %Y"
+# date_format: "%B %-d, %Y"
+date_format: "%Y-%m-%d"
 
 # Facebook App ID
 #fb_app_id: ""

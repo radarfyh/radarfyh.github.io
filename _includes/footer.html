@@ -3,6 +3,8 @@
     <div class="row">
       <div class="col-xl-8 offset-xl-2 col-lg-10 offset-lg-1">
       {% include social-networks-links.html %}
+      {% assign lang = page.language | default: page.lang | default: site.default_lang | default: 'zh' %}
+      {% assign t = site.data.i18n[lang] %}
       {% if page.footer-extra %}
         <div class="footer-custom-content">
           {% for file in page.footer-extra %}
@@ -12,7 +14,7 @@
       {% endif %}
       <p class="copyright text-muted">
       {% if site.author %}
-        {{ site.author }}
+        {{ t.site.author }}
         &nbsp;&bull;&nbsp;
       {% endif %}
       {{ site.time | date: '%Y' }}
@@ -20,7 +22,7 @@
       {% if site.url-pretty %}
         &nbsp;&bull;&nbsp;
         <span class="author-site">
-          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">{{ site.url-pretty }}</a>
+          <a href="{% if site.url-canonical %}{{ site.url-canonical }}{% else %}{{ '/' | absolute_url }}{% endif %}">{{ t.site.url_pretty }}</a>
         </span>
       {% endif %}
 
@@ -43,7 +45,7 @@
 
       </p>
       {% if site.icp-license %}<p class="theme-by text-muted">
-        <a href="http://beian.miit.gov.cn/">ICP License: {{ site.icp-license }}</a>
+        <a href="http://beian.miit.gov.cn/">{{ t.site.icp_license }}</a>
       </p>{% endif %}
       </div>
     </div>

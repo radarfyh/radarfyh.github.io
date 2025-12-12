@@ -1,6 +1,7 @@
 # 网站通用文本
 site:
   title: "Intelligent Software Development Services"
+  subtitle: "Providing Intelligent Agent, CRM System, and OA System Development Services"
   author: "Feng Yonghua"
   url_pretty: "Hunting Info Co. Ltd."
   rss_description: "Latest updates on Intelligent Agents, CRM System, and OA System"

@@ -1,6 +1,7 @@
 # 网站通用文本
 site:
   title: "智能软件开发服务"
+  subtitle: "提供智能代理、CRM系统和OA系统开发服务"
   author: "冯永华"
   url_pretty: "重庆狩猎信息技术有限公司"
   rss_description: "智能代理、CRM系统和OA系统的最新动态"

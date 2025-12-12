@@ -11,12 +11,14 @@
 
 # Name of website
 title: Intelligent Software Development Services
+cover-img: "/assets/img/home-cover.png"
+subtitle: "Providing Intelligent Agent, CRM System, and OA System Development Services"
 
 # Your name to show in the footer
 author: Feng Yonghua
 
 languages: ["en", "zh"]
-default_lang: "en"
+default_lang: "zh"
 exclude_from_localization: ["javascript", "images", "css"]
 parallel_localization: true
 

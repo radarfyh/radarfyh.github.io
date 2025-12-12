@@ -1,0 +1,204 @@
+
+<!-- ===========================
+     产品可视化
+=========================== -->
+<section class="projects py-5">
+  <div class="container">
+    <!-- 图片一行 -->
+    <div class="row text-center mb-3">
+      <div class="col-md-4 mb-3">
+        <a href="/{{lang}}/crmsystem">
+          <img src="/assets/img/crm_customer_list.png" class="img-fluid rounded shadow" alt="{{ t.products.crm.title }}">
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <a href="/{{lang}}/oasystem">
+          <img src="/assets/img/oa_workflow.png" class="img-fluid rounded shadow" alt="{{ t.products.oa.title }}">
+        </a>
+      </div>
+
+      <div class="col-md-4 mb-3">
+        <a href="/{{lang}}/intelligentagent">
+          <img src="/assets/img/agent_architecture_{{lang}}.png" class="img-fluid rounded shadow" alt="{{ t.products.agent.title }}">
+        </a>
+      </div>
+    </div>
+
+    <!-- 文本一行 -->
+    <div class="row text-center">
+      <div class="col-md-4">
+        <h3><a href="/{{lang}}/crmsystem">{{ t.products.crm.title }}</a></h3>
+        <p>{{ t.products.crm.desc }}</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3><a href="/{{lang}}/oasystem">{{ t.products.oa.title }}</a></h3>
+        <p>{{ t.products.oa.desc }}</p>
+      </div>
+
+      <div class="col-md-4">
+        <h3><a href="/{{lang}}/intelligentagent">{{ t.products.agent.title }}</a></h3>
+        <p>{{ t.products.agent.desc }}</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===========================
+     客户证明
+=========================== -->
+<section class="clients py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-5">{{ t.clients.section_title }}</h2>
+
+    <!-- 图片一行 -->
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <img src="/assets/img/client2.png" class="img-fluid mb-2" alt="{{ t.clients.list[0].source }}">
+      </div>
+      <div class="col-md-4">
+        <img src="/assets/img/client3.png" class="img-fluid mb-2" alt="{{ t.clients.list[1].source }}">
+      </div>
+      <div class="col-md-4">
+        <img src="/assets/img/client4.png" class="img-fluid mb-2" alt="{{ t.clients.list[2].source }}">
+      </div>
+    </div>
+
+    <!-- 评价语 + 来源 -->
+    <div class="row">
+      <div class="col-md-4">
+        <blockquote>
+          <p>“{{ t.clients.list[0].text }}”</p>
+          <small class="text-muted d-block mt-2">— {{ t.clients.list[0].source }}</small>
+        </blockquote>
+      </div>
+
+      <div class="col-md-4">
+        <blockquote>
+          <p>“{{ t.clients.list[1].text }}”</p>
+          <small class="text-muted d-block mt-2">— {{ t.clients.list[1].source }}</small>
+        </blockquote>
+      </div>
+
+      <div class="col-md-4">
+        <blockquote>
+          <p>“{{ t.clients.list[2].text }}”</p>
+          <small class="text-muted d-block mt-2">— {{ t.clients.list[2].source }}</small>
+        </blockquote>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===========================
+     Hero CTA
+=========================== -->
+<section class="hero text-center py-5">
+  <div class="container">
+
+    <button id="openDemo" class="btn btn-primary btn-lg mx-2">
+      {{ t.cta.demo }}
+    </button>
+
+    <button id="openDemo2" class="btn btn-outline-primary btn-lg mx-2">
+      {{ t.cta.trial }}
+    </button>
+
+  </div>
+</section>
+
+<hr class="small">
+
+<!-- ===========================
+     弹窗表单
+=========================== -->
+<div id="demoModal" class="modal" style="display:none;">
+  <div class="modal-dialog">
+    <div class="modal-content p-4">
+
+      <span id="closeDemo" class="close" style="cursor:pointer; font-size:28px; position:absolute; right:20px; top:10px;">&times;</span>
+
+      <h3 class="text-center mb-3">{{ t.cta.form.title }}</h3>
+
+      <form id="demoForm">
+        <input type="text" name="name" class="form-control mb-2" placeholder="{{ t.cta.form.name }}" required>
+        <input type="text" name="company" class="form-control mb-2" placeholder="{{ t.cta.form.company }}" required>
+        <input type="tel" name="phone" class="form-control mb-2" placeholder="{{ t.cta.form.tel }}" required>
+        <input type="email" name="email" class="form-control mb-2" placeholder="{{ t.cta.form.email }}" required>
+        <input type="wechat" name="wechat" class="form-control mb-2" placeholder="{{ t.cta.form.wechat }}" >
+
+        <select name="product" class="form-control mb-2" required>
+          <option value="">{{ t.cta.form.product.title }}</option>
+          <option value="{{ t.cta.form.product.option1 }}">{{ t.cta.form.product.option1 }}</option>
+          <option value="{{ t.cta.form.product.option2 }}">{{ t.cta.form.product.option2 }}</option>
+          <option value="{{ t.cta.form.product.option3 }}">{{ t.cta.form.product.option3 }}</option>
+        </select>
+
+        <select name="project_size" class="form-control mb-2" required>
+          <option value="">{{ t.cta.form.project_size.title }}</option>
+          <option value="{{ t.cta.form.project_size.option1 }}">{{ t.cta.form.project_size.option1 }}</option>
+          <option value="{{ t.cta.form.project_size.option2 }}">{{ t.cta.form.project_size.option2 }}</option>
+          <option value="{{ t.cta.form.project_size.option3 }}">{{ t.cta.form.project_size.option3 }}</option>
+        </select>
+
+        <textarea name="message" class="form-control mb-3" placeholder="{{ t.cta.form.message }}"></textarea>
+
+        <button type="submit" class="btn btn-primary w-100">
+          {{ t.cta.form.submit }}
+        </button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+<!-- ===========================
+     EmailJS + 弹窗脚本
+=========================== -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  emailjs.init("sE2BCCnOJw3FRNDOH"); // Public Key
+
+  const modal = document.getElementById('demoModal');
+  const open1 = document.getElementById('openDemo');
+  const open2 = document.getElementById('openDemo2');
+  const closeBtn = document.getElementById('closeDemo');
+
+  open1.onclick = () => modal.style.display = 'block';
+  open2.onclick = () => modal.style.display = 'block';
+  closeBtn.onclick = () => modal.style.display = 'none';
+  window.onclick = e => { if(e.target === modal) modal.style.display = 'none'; }
+
+  // 发送 EmailJS
+  document.getElementById('demoForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const submitTime = new Date().toISOString();
+    const params = {
+      name: form.name.value,
+      company: form.company.value,
+      phone: form.phone.value,
+      email: form.email.value,
+      wechat: form.wechat.value,
+      product: form.product.value,
+      project_size: form.project_size.value,
+      message: form.message.value,
+      time: submitTime,
+      to_email: "{{ site.social-network-links.email }}"
+    };
+
+    emailjs.send('service_ydc42pd','template_0dylxxo', params)
+      .then(() => {
+        alert("{{ t.cta.form.success }}");
+        form.reset();
+        modal.style.display = 'none';
+      })
+      .catch(err => {
+        alert("{{ t.cta.form.fail }}");
+        console.error(err);
+      });
+  });
+</script>

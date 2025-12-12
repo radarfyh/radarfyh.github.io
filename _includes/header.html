@@ -45,19 +45,21 @@
               {% include readtime.html %}
             {% endif %}
           {% else  %}
-            {% if lang == "zh" && page.title == "Intelligent Software Development Services" %}
+            {% if page.title == "Intelligent Software Development Services" %}
               <h1>{{ t.site.title | strip_html }}</h1>
+              <hr class="small">
+              <span class="{{ include.type }}-subheading">{{ t.site.subtitle | strip_html }}</span>
             {% else %}
               <h1>{% if page.title %}{{ page.title | strip_html }}{% else %}<br/>{% endif %}</h1>
+              {% if page.subtitle %}
+                {% if include.type == "page" %}
+                  <hr class="small">
+                  <span class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</span>
+                {% else %}
+                  <h2 class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</h2>
+                {% endif %}
+              {% endif %}  
             {% endif %}
-            {% if page.subtitle %}
-              {% if include.type == "page" %}
-                <hr class="small">
-                <span class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</span>
-              {% else %}
-                <h2 class="{{ include.type }}-subheading">{{ page.subtitle | strip_html }}</h2>
-              {% endif %}
-            {% endif %}  
           {% endif %}
         </div>
       </div>

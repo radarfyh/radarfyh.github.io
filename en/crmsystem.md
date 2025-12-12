@@ -1,92 +1,95 @@
 ---
 layout: page
 language: en
-title: CRM System Introduction
-subtitle: Data-driven decisions, lasting customer relationships!
+title: Customer Relationship Management System (CRM)
+subtitle: Automated sales lead follow-up to improve sales efficiency and customer satisfaction
+permalink: /en/crmsystem/
 ---
 
-Our AI-powered CRM system is the growth engine for modern businesses, delivering three core capabilities:
-- 360° Customer Profile - Unified communication history, transactions & behavioral data for precision insights
-- Sales Automation - End-to-end automation from lead assignment to deal closure, boosting conversions by 40%
-- Data-Driven Decisions - Real-time dashboards identify high-value clients and emerging risks
+The CRM system is designed for **service industries such as catering and pharmaceuticals, foreign trade teams, and sales-driven businesses**, helping companies address slow lead follow-up, high customer churn, inconsistent sales actions, and lack of real-time visibility for managers. It standardizes, automates, and visualizes the sales process.
 
+---
 
-## The Transformation of Business Structures, Commercial Models, and Profit Mechanisms in Traditional Industries
+## Problems Solved by CRM
 
-- Under the impact of internet technologies such as cloud computing, big data, mobile, and social media, traditional industries have undergone significant changes in their business structures, commercial models, and profit mechanisms—particularly in how enterprises interact with their customers.
+| Key Pain Points | CRM Solutions |
+|-----------------|---------------|
+| Low sales follow-up efficiency | Automated follow-up reminders to prevent lead loss |
+| Dispersed customer information | Centralized customer profiles for complete information |
+| Managers lack real-time insights | Real-time dashboards for instant data visibility |
+| Inconsistent sales execution | Automated customer lifecycle workflows to unify actions |
 
-- The old methods of customer engagement and management have become inefficient and outdated, leading to common challenges such as:
-  - **Lack of a Scientific and Rational Sales Resource Allocation & Customer Ownership Mechanism**
-    - Internal conflicts between direct sales and channel partners, or even among sales reps within the same team, due to no effective conflict resolution process
-    - No unified standard for determining customer ownership, leading to multiple teams repeatedly approaching the same client, causing customer fatigue and dissatisfaction
-  - **Absence of an Effective Follow-Up System, Leading to Poor Customer Retention**
-    - Companies possess only basic customer data, with most deals being one-time transactions
-    - Customer resources are lost when sales reps leave, and when client information is transferred across departments or product lines, new personnel struggle to pick up the thread due to missing historical details, resulting in poor user experience
-  - **Low Utilization of Customer Resources**
-    - No complete lifecycle data prevents companies from maximizing customer value through repeat engagement
-    - Managers lack visibility into follow-up processes, leading to opaque operations and unexplained customer attrition
+CRM leverages **automated reminders, AI scoring, and workflow management** to reduce repetitive tasks, improve follow-up efficiency, and help managers quickly identify opportunities and risks.
 
-## The Rise of Data-Driven Intelligent Marketing Makes Value-Based Marketing the New Standard
+---
 
-  **Marketing Intelligence & Digitalization:** Quantifiable, testable, analyzable, predictable, and measurable—CRM has evolved from a basic customer management tool into a **lean, data-driven business platform**
+## Core Features
 
-  - **1. M2L - Marketing to Leads**  
-    - Omnichannel marketing (online & offline)  
-    - Behavioral data capture & tagging  
-    - Automated marketing workflows  
+1. **Lead Management**
+   - Automatic lead capture, import, and assignment
+   - AI scoring to predict lead conversion likelihood
 
-  - **2. L2O - Lead to Opportunity**  
-    - Automated lead deduplication  
-    - Intelligent lead scoring  
-    - Automated nurturing  
+2. **Customer Management & Assignment**
+   - Centralized customer information management
+   - Supports automatic or manual assignment to sales personnel
+   - Multi-dimensional tagging (industry, region, priority, etc.)
 
-  - **3. L2O - SDR Lead Engagement**  
-    - Tele-sales workspace  
-    - Interaction behavior tracking  
-    - Smart lead distribution  
+3. **Follow-up & Task Management**
+   - Log every communication
+   - Automated reminders for next sales action
+   - Task assignment, reminders, and progress tracking
 
-  - **4. L2O - Sales Conversion**  
-    - Lead-to-deal conversion  
-    - Customer retention tracking  
-    - Automated lead recycling  
+4. **Quotations & Contract Management**
+   - Generate and manage quotations
+   - Contract approval and archiving
+   - Automatic notifications for contract expiry and renewals
 
-  - **5. O2C - Opportunity to Customer**  
-    - Structured sales pipeline  
-    - CPQ (Configure-Price-Quote)  
-    - Win/loss analysis  
+5. **Sales Funnel & Performance Reports**
+   - Visualized sales funnel with real-time stage monitoring
+   - Employee performance reports and team KPI analysis
+   - Data export and multi-dimensional analysis
 
-  - **6. I2R - Deal Closing**  
-    - Deal governance rules  
-    - Contract management  
-    - Order fulfillment  
+6. **Workflow Automation**
+   - Full lifecycle automation of customer management
+   - Intelligent suggestions for next best action
+   - Multi-language support for international teams
 
-  - **7. CSM - Customer Success Management**  
-    - Integrated customer service  
-    - Long-term value realization  
-    - Advocacy & repeat purchasing  
+---
 
-![the features of the CRM system](/assets/img/hunting-info-services-20250408-en_12.png)
+## Visual Interface Preview
 
-## **The Value of CRM:**  
+1. **Customer List Page**
+   ![Customer List Page](/assets/img/crm_customer_list.png) 
+2. **Customer Detail Page**
+   ![Customer Detail Page](/assets/img/crm_customer_detail.png) 
+3. **Follow-up Log Page**
+   ![Follow-up Log Page](/assets/img/crm_followup_log.png) 
+4. **Sales Funnel View**
+   ![Sales Funnel View](/assets/img/crm_sales_funnel.png) 
+5. **Dashboard**
+   ![Dashboard](/assets/img/crm_dashboard.png) 
+6. **Workflow Configuration Page**
+   ![Workflow Configuration Page](/assets/img/crm_workflow_config.png) 
 
-Helps enterprises break down internal information silos, consolidate previously fragmented customer data across departments, and align cross-functional operations—boosting both operational efficiency and economic performance. Key benefits include:  
+---
 
-  1. **Lower customer acquisition costs**  
-  2. **Shortened sales cycles**  
-  3. **Higher customer retention rates**  
-  4. **Improved deal win rates**  
-  5. **Increased sales conversion rates**  
+## System Highlights & Differentiators
 
-**Limitations of Traditional Customer Management:**  
-  - Manual, repetitive sales processes  
-  - Reliance on individual sales reps' initiative for client outreach  
-  - Customer loss when sales personnel leave  
-  - Over-dependence on individual performance  
+- **AI Lead Scoring**: Predict lead conversion probability and prioritize high-value customers  
+- **Intelligent Action Recommendations**: Provides next best sales action suggestions  
+- **Real-time Data Insights**: Managers have instant access to team and customer status  
+- **Multi-language Support**: Facilitates cross-regional collaboration for international teams  
+- **Automated Workflows**: Reduces repetitive tasks and ensures consistent sales execution  
 
-**Advantages of Modern CRM Systems:**  
-  - **Automated marketing** – efficient and user-friendly  
-  - **AI-powered client engagement reminders**  
-  - **Centralized customer data storage**  
-  - **Standardized team sales processes**  
-  
-![the values of the CRM system](/assets/img/hunting-info-services-20250408-en_11.png)
+---
+
+## Customer Cases
+
+1. **Chongqing Zhengzhu Technology Co., Ltd.**  
+   - After using the Fengyun CRM system, lead conversion rate increased by **30%**  
+   - Contract approval cycle reduced by **70%**
+
+2. **Chongqing Canglin Industrial Co., Ltd.**  
+   - Since deploying the Fengyun system in 2024, using **public pool rules** and **intelligent to-do**, the number of customers followed up per salesperson doubled  
+   - Sales forecast accuracy reached **95%**
+

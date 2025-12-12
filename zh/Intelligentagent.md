@@ -1,89 +1,77 @@
 ---
 layout: page
 language: zh
-title: 智慧自动软件机器人
-subtitle: 为您的业务增长打造定制化智能自动化 AI Agent！
+title: 企业级 AI Agent（智能自动软件机器人）
+subtitle: 提升效率，实现企业流程自动化
+permalink: /zh/intelligentagent/
 ---
 
-## 技术架构（Architecture）
-
-![Architecture](/assets/img/hunting-info-services-20250408-en_08.png)
-
-## 核心组件（Key Components）
-
-- **知识库（Knowledge Base）**：  
-  包含与你的业务领域相关的结构化与非结构化数据。
-
-- **决策引擎（Decision Engine）**：  
-  由业务规则与机器学习模型组成，为 AI Agent 提供决策能力。
-
-- **API 集成层（API Layer）**：  
-  用于连接其他系统、服务与数据源。
-
-- **监控系统（Monitoring）**：  
-  提供实时性能监控与反馈循环，以便持续优化。
+企业级 AI Agent 系统面向 **希望提升效率和自动化的企业，以及没有专业 AI 团队的客户**。系统解决重复劳动、人工决策依赖、效率低下、数据洞察缺失等问题，通过智能化流程和 AI 驱动决策，实现企业全流程自动化与智能优化。
 
 ---
 
-## 典型应用场景（Use Cases）
+## 一、AI Agent 的价值
 
-### 客户支持（Customer Support）  
-能够处理复杂客户咨询的智能客服 AI：
-
-  * 技术故障排查  
-  * 个性化产品推荐  
-  * 多语言交互支持  
-
-### 业务流程自动化（Business Process Automation）  
-用于自动化多步骤复杂流转的业务机器人：
-
-  * 发票处理  
-  * 合规性检查  
-  * 供应链优化  
+- **自动化重复流程**：将日常重复任务自动执行，提高团队效率  
+- **AI 驱动决策**：通过数据分析与智能预测，辅助管理者决策  
+- **7×24 小时运行**：全天候自动化执行业务任务  
+- **降低人工成本**：减少人工干预，提高工作精度  
 
 ---
 
-## 实施方法（Implementation Approach）
+## 二、典型应用场景
 
-### 开发步骤（Development Steps）
+- **客服自动化**  
+  - 自动回答客户问题  
+  - 工单智能分配  
+  - 客户咨询历史自动追踪  
 
-1. **需求分析（Requirement Analysis）**  
-   识别关键决策点与知识需求。  
+- **办公自动化**  
+  - 自动生成周报、月报、会议总结  
+  - 报表和数据分析自动化  
+  - 日程与任务管理优化  
 
-2. **数据准备（Data Preparation）**  
-   收集、清洗、结构化与业务相关的数据集。  
+- **外贸 AI Agent**  
+  - 自动撰写开发信  
+  - 生成报价单  
+  - 客户数据分析与跟进策略推荐  
 
-3. **模型训练（Model Training）**  
-   开发并微调适用于场景的机器学习模型。  
-
-4. **系统集成（Integration）**  
-   将 AI Agent 与现有系统和 API 进行连接。  
-
-![process of building custom ai agent](/assets/img/hunting-info-services-20250408-en_07.png)
-
-### 技术栈（Technology Stack）
-
-1. **Python / TensorFlow / PyTorch**  
-2. **LangChain / LLamaIndex**  
-3. **向量数据库（Vector Databases）**  
-4. **Kubernetes**  
-5. **FastAPI / GraphQL**
+- **财务 AI Agent**  
+  - 自动记账和对账  
+  - 报表生成  
+  - 财务异常监控与提醒  
 
 ---
 
-## 商业价值（Business Benefits）
+## 三、技术架构
 
-- **7x24 小时在线（24/7 Availability）**  
-  *AI 代理可全天候运行，不会疲劳。*
+系统采用模块化、可扩展的智能体架构，涵盖模型管理、知识库管理、向量库管理、提示语管理、应用与渠道管理等功能模块，支持跨系统调用和低代码配置。  
 
-- **可扩展性（Scalability）**  
-  *工作量增长时无需线性增加成本。*
-
-- **一致性（Consistency）**  
-  *消除人工决策的不稳定性，提高质量稳定度。*
+### 架构示意图
+![AI Agent 架构图](/assets/img/agent_architecture_zh.png)  
 
 ---
 
-## 开始打造你的专属 AI Agent
+## 四、可交付 Demo 展示
 
-- 请联系我们的 AI 专家团队，讨论适合您业务的定制化智能软件机器人方案。
+1. **CRM AI 助手**  
+   ![CRM AI 助手](/assets/img/agent_crm_assistant.png)  
+   功能：自动推荐客户跟进动作、智能生成销售预测  
+
+2. **OA 自动化助手**  
+   ![OA 自动化助手](/assets/img/agent_oa_assistant.png)  
+   功能：审批流程自动化、智能汇总周报和任务提醒  
+
+3. **数据分析 Agent**  
+   ![数据分析 Agent](/assets/img/agent_data_analysis.png)  
+   功能：自动生成业务数据分析报表，提供决策洞察  
+
+---
+
+## 五、客户案例
+
+1. **恒社（重庆）餐饮管理有限公司**  
+   > “自从使用企业级 AI Agent 后，客服自动回复率提升至 95%，日常报表和分析任务无需人工干预，团队效率大幅提升。” — 总经理 卢先生  
+
+2. **融通医疗健康集团有限公司**  
+   > “AI Agent 帮助我们自动撰写签报，并分析潜在风险，团队每月跟进签报数量增加了 2 倍，风险预测准确率达 96%。” — IT总经理 张先生

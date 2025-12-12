@@ -1,7 +1,7 @@
 # 网站通用文本
 site:
-  title: "智能软件开发服务"
-  subtitle: "提供智能代理、CRM系统和OA系统开发服务"
+  title: "外贸、服务业智能软件服务"
+  subtitle: "智能统一客户管理、团队协作和自动化流程，让企业销售更快、协作更高效、运营更智能。"
   author: "冯永华"
   url_pretty: "重庆狩猎信息技术有限公司"
   rss_description: "智能代理、CRM系统和OA系统的最新动态"
@@ -77,3 +77,52 @@ socials:
   phone: "给我们电话"
   whatsapp: "WhatsApp"
   qq: "QQ"
+
+# 首页产品
+products:
+  crm:
+    title: "CRM 客户系统"
+    desc: "统一管理客户、自动提醒跟进，提高销售效率。"
+  oa:
+    title: "OA 协作与流程系统"
+    desc: "自动化流程与智能审批，提升团队协作效率。"
+  agent:
+    title: "AI Agent 智能助手"
+    desc: "自动化重复劳动，提高决策速度，节省人力成本。"
+
+# 首页客户证明
+clients:
+  section_title: "值得信赖的企业客户"
+  list:
+    - text: "“我们使用风云 CRM 和 OA 系统后，销售线索转化率提升30%，合同审批周期缩短70%。”"
+      source: "— 重庆征逐科技有限公司"
+    - text: "“AI Agent 帮助我们自动撰写签报，并分析潜在风险，团队每月跟进签报数量增加了 2 倍，风险预测准确率达 96%。”"
+      source: "— 融通医疗健康集团有限公司"
+    - text: "“自从引入风云OA系统，我们的跨团队沟通效率提升明显，审批流程从平均3天缩短至1天以内，整个项目执行更有条理。”"
+      source: "— 重庆艾唯室内装饰设计有限公司"
+
+# 首页行动号召
+cta:
+  demo: "预约 Demo"
+  trial: "免费试用"
+  form: 
+    title: "预约 Demo / 免费试用"
+    name: "姓名"
+    company: "公司"
+    tel: "电话"
+    email: "邮箱"
+    wechat: "微信(可选)"
+    product: 
+      title: "你需要哪类产品？"
+      option1: "客户关系管理"
+      option2: "办公自动化"
+      option3: "基于大语言模型的智能体"
+    project_size:
+      title: "你的项目规模(使用人数)？"
+      option1: "小型(2-10)"
+      option2: "中型(11-100)"
+      option3: "大型(100-10000)"
+    message: "留言(可选)"
+    submit: "提交"
+    success: "提交成功！我们会尽快联系您。"
+    fail: "提交失败，请稍后重试。"

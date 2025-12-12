@@ -1,7 +1,7 @@
 # 网站通用文本
 site:
-  title: "Intelligent Software Development Services"
-  subtitle: "Providing Intelligent Agent, CRM System, and OA System Development Services"
+  title: "Intelligent Software Services for Export & Service Industries"
+  subtitle: "Unified customer management, team collaboration, and automated workflows to make your sales faster, collaboration more efficient, and operations smarter."
   author: "Feng Yonghua"
   url_pretty: "Hunting Info Co. Ltd."
   rss_description: "Latest updates on Intelligent Agents, CRM System, and OA System"
@@ -79,3 +79,52 @@ socials:
   phone: "Phone"
   whatsapp: "WhatsApp"
   qq: "QQ"
+
+# 首页产品
+products:
+  crm:
+    title: "CRM System"
+    desc: "Centralize customer data, automate reminders, and improve sales efficiency."
+  oa:
+    title: "OA Workflow System"
+    desc: "Automated workflows and intelligent approvals to enhance team collaboration."
+  agent:
+    title: "AI Agent Assistant"
+    desc: "Automate repetitive work, speed up decision-making, and reduce manual labor."
+
+# 首页客户证明
+clients:
+  section_title: "Trusted by Leading Companies"
+  list:
+    - text: "“After using Fengyun CRM and OA System, our lead conversion rate increased by 30% and contract approval time was reduced by 70%.”"
+      source: "— Chongqing Zhengzhu Technology Co., Ltd."
+    - text: "“AI Agent helps us automatically draft memos and analyze risks. Our monthly follow-up volume doubled, and risk prediction accuracy reached 96%.”"
+      source: "— Rongtong Healthcare Group Co., Ltd."
+    - text: "“Since implementing Fengyun OA System, cross-team communication has improved significantly. Approval processes dropped from 3 days to less than 1 day.”"
+      source: "— Chongqing Aiwei Interior Design Co., Ltd."
+
+# 首页行动号召
+cta:
+  demo: "Book a Demo"
+  trial: "Start Free Trial"
+  form: 
+    title: "Book a Demo / Start Free Trial"
+    name: "Name"
+    company: "Company"
+    tel: "Phone"
+    email: "Email"
+    wechat: "WeChat (optional)"
+    product: 
+      title: "Which type of product do you need?"
+      option1: "Customer Relationship Management"
+      option2: "Office Automation"
+      option3: "LLM-based Intelligent Agent"
+    project_size:
+      title: "What is the size of your project or the number of user?"
+      option1: "Small (1-10)"
+      option2: "Medium (10-100)"
+      option3: "Large (100+)"
+    message: "Message (optional)"
+    submit: "Submit"
+    success: "Submission successful! We will contact you shortly."
+    fail: "Submission failed, please try again later."

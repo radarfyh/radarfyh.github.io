@@ -29,6 +29,7 @@ navbar-links:
     - intelligent_agent: "intelligentagent"
     - crm_system: "crmsystem"
     - oa_system: "oasystem"
+  blog: "blog"
   join_us: "joinus"
   about_me: "aboutme"
 

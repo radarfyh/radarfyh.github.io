@@ -370,6 +370,7 @@ source /opt/rh/devtoolset-9/enable
 echo 'source /opt/rh/devtoolset-9/enable' >> ~/.bashrc
 # 添加gem阿里云镜像
 gem sources -a http://mirrors.aliyun.com/rubygems/
+gem sources -l
 # 安装RVM，用于管理Ruby版本
 #gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB 
 gpg2 --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
@@ -437,9 +438,9 @@ gem update --system 3.4.22
 sudo dnf install -y gcc gcc-c++ make patch
 
 # 设置全局镜像
-bundle config mirror.https://mirrors.aliyun.com/rubygems/ https://rubygems.org 
-gem sources --remove https://rubygems.org/
-gem sources -l
+bundle config mirror.https://rubygems.org https://mirrors.aliyun.com/rubygems/  
+#gem sources --remove https://rubygems.org/
+bundle config
 
 # 对于rocklinux 9.x,安装 Jekyll 和 Bundler
 mkdir -p /usr/local/ruby/3.0.0

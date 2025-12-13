@@ -11,11 +11,12 @@ site:
 
 # 导航栏
 navbar:
-  services: "服务项目"
-  intelligent_agent: "智能代理"
-  crm_system: "CRM系统"
-  oa_system: "OA系统"
-  join_us: "加入我们"
+  services: "我的服务"
+  intelligent_agent: "企业级AI智能体"
+  crm_system: "客户关系系统"
+  oa_system: "协同办公系统"
+  blog: "我的动态"
+  join_us: "加入我"
   about_me: "关于我"
   search: "搜索"
   language_switcher: "EN"

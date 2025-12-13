@@ -107,7 +107,8 @@ clients:
 # 首页行动号召
 cta:
   demo: "Book a Demo"
-  trial: "Start Free Trial"
+  trial: "Book Free Trial"
+  agent_trial: "AI Agent Online Trial"
   form: 
     title: "Book a Demo / Start Free Trial"
     name: "Name"

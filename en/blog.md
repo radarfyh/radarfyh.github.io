@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: blog
 language: en
 title: News
 pagination:

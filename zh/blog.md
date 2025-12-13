@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: blog
 language: zh
 title: 动态
 pagination:

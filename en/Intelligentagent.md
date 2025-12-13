@@ -1,10 +1,21 @@
 ---
 layout: page
 language: en
-title: Enterprise AI Agent (Intelligent Robotic Software)
-subtitle: Improve Efficiency and Automate Enterprise Processes
+title: Enterprise AI Agent
+subtitle: Intelligent Robotic Software can Improve Efficiency and Automate Enterprise Processes
 permalink: /en/intelligentagent/
 ---
+
+<div class="text-center my-4">
+  <a
+    href="http://backend.hunting-info.ltd"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn btn-success btn-lg"
+  >
+    🚀 Try AI Agent Online (Live Demo)
+  </a>
+</div>
 
 The Enterprise AI Agent system is designed for **companies seeking to improve efficiency and automation, especially those without dedicated AI teams**. It addresses repetitive tasks, dependency on human decision-making, low operational efficiency, and lack of data insights. Through intelligent workflows and AI-driven decisions, it enables full-process enterprise automation and optimization.
 

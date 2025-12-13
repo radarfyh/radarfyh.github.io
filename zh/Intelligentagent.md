@@ -1,10 +1,21 @@
 ---
 layout: page
 language: zh
-title: 企业级 AI Agent（智能自动软件机器人）
-subtitle: 提升效率，实现企业流程自动化
+title: 企业级智能体
+subtitle: 智能自动软件机器人，大幅度提升效率，实现企业流程自动化
 permalink: /zh/intelligentagent/
 ---
+
+<div class="text-center my-4">
+  <a
+    href="http://backend.hunting-info.ltd"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="btn btn-success btn-lg"
+  >
+    🚀 智能体免费试用（在线演示）
+  </a>
+</div>
 
 企业级 AI Agent 系统面向 **希望提升效率和自动化的企业，以及没有专业 AI 团队的客户**。系统解决重复劳动、人工决策依赖、效率低下、数据洞察缺失等问题，通过智能化流程和 AI 驱动决策，实现企业全流程自动化与智能优化。
 

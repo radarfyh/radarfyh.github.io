@@ -11,8 +11,8 @@ site:
 
 # 导航栏
 navbar:
-  services: "我的服务"
-  intelligent_agent: "企业级AI智能体"
+  services: "我的企业服务"
+  intelligent_agent: "企业级智能体"
   crm_system: "客户关系系统"
   oa_system: "协同办公系统"
   blog: "我的动态"
@@ -104,8 +104,9 @@ clients:
 
 # 首页行动号召
 cta:
-  demo: "预约 Demo"
-  trial: "免费试用"
+  demo: "预约演示"
+  trial: "预约CRM免费试用"
+  agent_trial: "智能体在线试用"
   form: 
     title: "预约 Demo / 免费试用"
     name: "姓名"

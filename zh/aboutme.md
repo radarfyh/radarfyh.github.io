@@ -51,8 +51,7 @@ subtitle: 持续演进的软件与AI能力，驱动企业数字化升级。
 
 除了项目实践，我们也持续沉淀方法论与架构能力：
 
-- [智能体系统技术架构设计讲解](https://www.bilibili.com/video/BV1hEMNeyEVT/?utm_source=chatgpt.com)
-
+- [智能体进化史](https://www.bilibili.com/video/BV1vbvSBJEa1/?spm_id_from=333.1387.homepage.video_card.click&vd_source=ebdeca575ae4cfdff273ef02ae8db21c)
 
 - [智能体系统技术架构设计讲解](https://www.bilibili.com/video/BV1x1vSBBEoM/?vd_source=ebdeca575ae4cfdff273ef02ae8db21c)
 
@@ -91,6 +90,6 @@ subtitle: 持续演进的软件与AI能力，驱动企业数字化升级。
 ### 更多信息
 
 - 公司资料：  
-  https://www.qcc.com/firm/03cad8f0c58601227c0962ede9f51ed0.html  
+  [狩猎信息](https://www.qcc.com/firm/03cad8f0c58601227c0962ede9f51ed0.html)
 
 - 本站基于 Beautiful Jekyll 构建  

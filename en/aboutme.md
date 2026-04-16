@@ -80,6 +80,6 @@ We care about:
 ### More Information
 
 - Company profile:  
-  https://www.qcc.com/firm/03cad8f0c58601227c0962ede9f51ed0.html  
+  [Hunting Info Co. Ltd.](https://www.qcc.com/firm/03cad8f0c58601227c0962ede9f51ed0.html)
 
 - This site is built with Beautiful Jekyll  

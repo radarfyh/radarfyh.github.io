@@ -1,3 +1,9 @@
+## 2026-10-27 产品官网入口
+
+首页源码为 `index.html` 与 `zh/index.html`（`layout: null`、固定 permalink、关闭首页分页），资源为 `portal-assets/`。两份首页由本仓库 Jekyll 正式生成；英文首页、双语博客和备案配置继续保留。`portal-assets/portal-config.js` 只配置运营企业正式发布的 CRM 公开咨询表单 URL 与到期时间，空值或过期自动隐藏，不能填登录令牌或内部密钥。
+
+在依赖完整的 Ruby 环境执行 `bundle install`、`bundle exec jekyll build --trace`。生成 `_site/index.html`、`_site/zh/index.html` 与 `_site/portal-assets/` 后再按已审核发布流程上线。本次不 push、不触发远端工作流。`J:/work/feng-cloud3/doc/deploy/allsingle/website` 是对应发布快照，后续公开表单配置需两处同步并重新打包。
+
 # 安装数据库 --------------------------------------------------------------------------------------------------------------------
 
 ```

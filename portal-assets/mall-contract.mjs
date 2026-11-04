@@ -1,8 +1,8 @@
 /** Public product display only. Website never carries subject IDs, coupons, amounts or payment claims to checkout. */
 export function safeMallEndpoint(value, pageHost) {
   const url = new URL(value || 'https://all.hunting-info.ltd/crm/crm-commerce/mall/catalog');
-  const production = url.origin === 'https://all.hunting-info.ltd' && url.pathname === '/crm/crm-commerce/mall/catalog';
   const localHosts = ['localhost', '127.0.0.1', '192.168.106.4'];
+  const production = !localHosts.includes(pageHost) && url.origin === 'https://all.hunting-info.ltd' && url.pathname === '/crm/crm-commerce/mall/catalog';
   const local = localHosts.includes(pageHost) && localHosts.includes(url.hostname) && ['http:', 'https:'].includes(url.protocol)
     && ['/crm-commerce/mall/catalog', '/crm/crm-commerce/mall/catalog'].includes(url.pathname);
   if ((!production && !local) || url.username || url.password || url.search || url.hash) throw new Error('商城公开入口配置无效');
@@ -21,10 +21,14 @@ export function publicProducts(value) {
 export function addProduct(cart, selected) {
   return [...cart.filter((item) => item.product !== selected.product), selected].slice(0, 2);
 }
-export function checkoutLink(cart) {
+export function checkoutLink(cart, endpoint, pageHost) {
   const skus = cart.map((item) => item.sku);
   if (!skus.length || skus.length > 2 || skus.some((sku) => !/^[A-Za-z0-9:_.-]{1,128}$/.test(sku))) throw new Error('请先选择商品');
-  const url = new URL('https://all.hunting-info.ltd/crm/shop');
+  const url = new URL(endpoint || 'https://all.hunting-info.ltd/crm/shop');
+  const localHosts = ['localhost', '127.0.0.1', '192.168.106.4'];
+  const production = !localHosts.includes(pageHost) && url.origin === 'https://all.hunting-info.ltd' && url.pathname === '/crm/shop';
+  const local = localHosts.includes(pageHost) && localHosts.includes(url.hostname) && ['http:', 'https:'].includes(url.protocol) && url.pathname === '/shop';
+  if ((!production && !local) || url.username || url.password || url.search || url.hash) throw new Error('结算入口配置无效');
   url.searchParams.set('items', skus.join(','));
   return url.href;
 }

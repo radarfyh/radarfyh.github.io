@@ -18,3 +18,19 @@ test('mixed cart hands off only SKUs and replaces a plan within the same product
   assert.equal(addProduct(selected, { ...crm, sku: 'CRM_SILVER_ANNUAL' }).length, 2);
   assert.throws(() => checkoutLink([]));
 });
+
+test('test checkout stays in the test environment and carries only SKU choices', () => {
+ const link = new URL(checkoutLink([crm], 'http://192.168.106.4:31666/shop', '192.168.106.4'));
+ assert.equal(link.origin, 'http://192.168.106.4:31666');
+ assert.deepEqual([...link.searchParams.keys()], ['items']);
+ assert.throws(() => checkoutLink([crm], 'http://192.168.106.4:31666/shop', 'www.hunting-info.ltd'));
+ assert.throws(() => checkoutLink([crm], 'https://untrusted.invalid/shop', '192.168.106.4'));
+});
+
+test('test pages fail closed instead of falling back to production', () => {
+ for (const host of ['localhost', '127.0.0.1', '192.168.106.4']) {
+  assert.throws(() => safeMallEndpoint(undefined, host));
+  assert.throws(() => checkoutLink([crm], undefined, host));
+  assert.throws(() => checkoutLink([crm], 'https://all.hunting-info.ltd/crm/shop', host));
+ }
+});

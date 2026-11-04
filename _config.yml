@@ -299,6 +299,16 @@ pagination:
 
 # Exclude these files from production site
 exclude:
+  - target/
+  - scripts/
+  - deploy/
+  - doc/
+  - test/
+  - tests/
+  - Dockerfile
+  - build-image.sh
+  - deployment.yaml
+  - .dockerignore
   - CHANGELOG.md
   - CNAME
   - Gemfile

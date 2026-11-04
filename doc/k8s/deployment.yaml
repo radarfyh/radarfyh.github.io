@@ -1,0 +1,98 @@
+{
+  "apiVersion": "v1",
+  "kind": "List",
+  "items": [
+    {
+      "apiVersion": "apps/v1",
+      "kind": "Deployment",
+      "metadata": {
+        "name": "feng-portal",
+        "namespace": "feng-crm-s3"
+      },
+      "spec": {
+        "replicas": 1,
+        "selector": {
+          "matchLabels": {
+            "app": "feng-portal"
+          }
+        },
+        "template": {
+          "metadata": {
+            "labels": {
+              "app": "feng-portal"
+            },
+            "annotations": {
+              "feng-release-version": "1.3.18-2026110422"
+            }
+          },
+          "spec": {
+            "nodeSelector": {
+              "kubernetes.io/hostname": "k8s-master"
+            },
+            "securityContext": {
+              "runAsNonRoot": true,
+              "runAsUser": 101,
+              "runAsGroup": 101
+            },
+            "containers": [
+              {
+                "name": "portal",
+                "image": "feng-cloud/feng-portal:1.3.18-2026110422",
+                "imagePullPolicy": "IfNotPresent",
+                "ports": [
+                  {
+                    "containerPort": 8080
+                  }
+                ],
+                "resources": {
+                  "requests": {
+                    "cpu": "25m",
+                    "memory": "32Mi"
+                  },
+                  "limits": {
+                    "cpu": "250m",
+                    "memory": "128Mi"
+                  }
+                },
+                "readinessProbe": {
+                  "httpGet": {
+                    "path": "/healthz",
+                    "port": 8080
+                  }
+                },
+                "livenessProbe": {
+                  "httpGet": {
+                    "path": "/healthz",
+                    "port": 8080
+                  },
+                  "initialDelaySeconds": 10
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "apiVersion": "v1",
+      "kind": "Service",
+      "metadata": {
+        "name": "feng-portal",
+        "namespace": "feng-crm-s3"
+      },
+      "spec": {
+        "type": "NodePort",
+        "selector": {
+          "app": "feng-portal"
+        },
+        "ports": [
+          {
+            "port": 8080,
+            "targetPort": 8080,
+            "nodePort": 31667
+          }
+        ]
+      }
+    }
+  ]
+}

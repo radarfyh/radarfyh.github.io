@@ -24,7 +24,7 @@ if (area) {
       row.append(remove); selection.append(row);
     }
     checkout.hidden = !cart.length;
-    if (cart.length) checkout.href = checkoutLink(cart); else checkout.removeAttribute('href');
+    if (cart.length) checkout.href = checkoutLink(cart, window.HUNTING_PORTAL_CONFIG?.crmCheckoutUrl, location.hostname); else checkout.removeAttribute('href');
   }
   async function load() {
     const turn = ++generation;

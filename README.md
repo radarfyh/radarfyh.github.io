@@ -586,3 +586,39 @@ sudo chown -R nginx:nginx /feng-cloud/radarfyh.github.io/_site
 
 ```
 
+
+
+## 官网K8s测试镜像（2026-11-04）
+
+真实源码仅维护在本仓库。测试官网`http://192.168.106.4:31667/`，英文商城`/en/shop/`；CRM测试结算`http://192.168.106.4:31666/shop`。本节根清单只用于`feng-crm-s3`测试命名空间，不代替前面的生产站部署，不启用宿主机nginx。
+
+构建前先在该测试环境的User3版本表登记FENG_PORTAL发行并取得完整版本号，遵循feng-cloud3的编译前登记要求。当前已登记并部署版本为`1.3.18-2026110422`，更新构建不能覆盖旧发行。
+
+Linux构建机需有本项目Gemfile对应的Ruby/Jekyll依赖、可运行ESM脚本的Node、Docker及ctr。此次测试机使用Ruby2.7.2/Jekyll4.4.1和`/usr/bin/node`16.20.2；默认Node20依赖较新glibc，旧系统运行失败时应选兼容Node，不能把Node不可运行误判成网站代码失败。新环境先安装Gemfile依赖，已有离线依赖由根脚本`bundle lock --local`核对。Shell文件必须使用LF。
+
+在本仓库根目录执行（下一次更新用已登记的新发行号）：
+
+```sh
+export FENG_RELEASE_VERSION=1.3.18-2026110422
+export PORTAL_IMAGE_TAG="$FENG_RELEASE_VERSION"
+export PORTAL_CRM_ORIGIN=http://192.168.106.4:31666/
+export PORTAL_PUBLIC_ORIGIN=http://192.168.106.4:31667/
+export PORTAL_IMPORT_TO_CTR=1
+# 测试机现有兼容工具；其他机器按实际安装位置配置。
+export PATH=/usr/local/rvm/rubies/ruby-2.7.2/bin:/usr/bin:/usr/local/bin:/bin
+bash build-image.sh
+# 同步根deployment.yaml中镜像为上述已登记版本；doc/k8s是该文件的同步归档。
+kubectl apply -f deployment.yaml
+kubectl -n feng-crm-s3 rollout status deployment/feng-portal --timeout=180s
+curl --fail http://192.168.106.4:31667/healthz
+curl --fail http://192.168.106.4:31667/release.json
+curl --fail http://192.168.106.4:31667/crm-commerce/mall/catalog
+```
+
+先检查NodePort31667没有被其他服务占用。根`build-image.sh`生成`target/site`，再调用根Dockerfile构建镜像；`PORTAL_BUILD_ONLY=1`只生成静态制品，`PORTAL_SKIP_BUILD=1`只允许在已核对当前制品时复用。K8s使用非root nginx及探针。
+
+`configure-portal.mjs`将测试CRM链接、商城目录、咨询接口及结算地址绑定测试站，阻止生产域名进入测试结算。根nginx清单代理只读商品目录和官网咨询入口至测试CRM，不携带用户Bearer。测试响应增加noindex标识。咨询仍须由CRM配置来源、授权及有效表单才可提交；网站就绪不代表已经开放咨询采集，也不能据此触发真实客户消息或付款。
+
+2026-11-04：实际Jekyll/镜像构建及部署成功，商城/咨询6项Node契约通过，首页、英文页、英文商城、目录、发布信息及健康200，待用户手工页面验收。完整跨工程修复及制品SHA保存在feng-cloud3的`feng-busi/feng-ai/doc/crm-intelligent-expansion-20261103/手工验收第二批问题与决策-20261104.md`。
+
+官网22时独立校正版补充测试配置失效保护：测试页在咨询、目录或结算配置缺失时拒绝生产默认值，不回退生产接口；20时旧发布记录及制品仍保留。

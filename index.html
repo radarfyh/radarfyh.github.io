@@ -20,7 +20,8 @@ pagination:
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="/portal-assets/portal.css">
   <script src="/portal-assets/portal-config.js" defer></script>
-  <script src="/portal-assets/portal.js" defer></script>
+  <script type="module" src="/portal-assets/portal.js"></script>
+  <script type="module" src="/portal-assets/mall.js"></script>
   <title>HUNTING-INFO · Feng 球探与风云 CRM</title>
 </head>
 <body>
@@ -30,7 +31,7 @@ pagination:
     <a class="brand" href="/" aria-label="HUNTING-INFO 首页"><span class="brand-icon" aria-hidden="true">H<span>·</span></span><span>HUNTING-INFO<small>洞察驱动行动</small></span></a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navigation">菜单 <span aria-hidden="true">☰</span></button>
     <nav id="navigation" aria-label="主导航">
-      <a href="#products">产品与场景</a><a href="#membership">会员与订阅</a><a href="#contact">联系咨询</a>
+      <a href="#products">产品与场景</a><a href="#membership">会员与订阅</a><a href="#product-mall">产品商城</a><a href="#contact">联系咨询</a>
       <a class="button small outline" href="https://all.hunting-info.ltd/crm/" data-product-link>登录工作台 <span aria-hidden="true">↗</span></a>
     </nav>
   </div>
@@ -83,10 +84,30 @@ pagination:
     </div>
     <p class="payment-note"><span aria-hidden="true">ⓘ</span> 缴费入口已接入会员与订阅中心。真实在线支付尚未开放，当前可查看套餐、权益及账单；支付开放状态以账户内提示为准。</p>
   </div></section>
+    <section class="section shell" id="product-mall" data-language="zh">
+    <div class="section-heading"><div><p class="eyebrow">DIGITAL PRODUCTS</p><h2>选择服务，<br>分别确认权益。</h2></div><a class="text-link" href="/en/shop" lang="en">Shop in English</a></div>
+    <p class="payment-note">官网购物车只保留商品选择，不保存登录凭据。进入统一账号后，CRM确认企业、Feng球探确认本人，分别创建子单和扫码；零元开通单独记录，不自动续扣。</p>
+    <p data-mall-status role="status" aria-live="polite"></p><button data-mall-refresh class="button outline" type="button">刷新商品</button>
+    <div data-mall-products class="mall-grid"></div><h3>购物车</h3><div data-mall-cart></div>
+    <a data-mall-checkout class="button primary" hidden>登录并确认购物车与权益主体</a>
+    <p class="form-note">每类产品选择一项，可在结算页选择已定向发放的适用优惠券。真实支付是否开放，以子单页面为准；微信内同机付款暂不提供，请在电脑打开订单扫码。</p>
+  </section>
   <section class="section shell steps-section"><div><p class="eyebrow">A CLEAR NEXT STEP</p><h2>从了解，到真正用起来。</h2></div><ol class="steps"><li><span>01</span><div><h3>选择业务场景</h3><p>研究比赛，或经营客户。</p></div></li><li><span>02</span><div><h3>注册并进入产品</h3><p>在自己的账户里开始体验。</p></div></li><li><span>03</span><div><h3>按需开通服务</h3><p>查看权益、套餐和订单记录。</p></div></li></ol></section>
   <section class="contact-section" id="contact"><div class="shell contact-grid">
     <div><p class="eyebrow">03 / LET’S TALK</p><h2>先说说，<br>你想解决什么问题。</h2><p>产品咨询、企业接入，或软件定制需求。<br>留下一个清楚的起点，我们一起向前推进。</p><div id="crm-inquiry-entry" hidden><a id="crm-inquiry-link" class="button light" target="_blank" rel="noopener noreferrer">在线提交咨询 <span aria-hidden="true">↗</span></a><p id="crm-inquiry-note" class="form-note"></p></div><a class="contact-mail" href="mailto:feng.yonghua@foxmail.com">feng.yonghua@foxmail.com <span aria-hidden="true">↗</span></a><p class="contact-phone">电话 <a href="tel:+8618696777215">186 9677 7215</a><span>微信 radar_wind</span></p></div>
-    <form class="inquiry-form" id="inquiry-form"><h3>准备一份咨询需求</h3><label for="inquiry-product">我想了解</label><select id="inquiry-product" name="product"><option>风云 CRM 企业服务</option><option>Feng 球探会员服务</option><option>企业接入与软件定制</option></select><label for="inquiry-company">称呼 / 企业名称 <span>选填</span></label><input id="inquiry-company" name="company" maxlength="80" autocomplete="organization" placeholder="方便我们了解你的业务"><label for="inquiry-message">你的需求</label><textarea id="inquiry-message" name="message" rows="3" maxlength="1000" required placeholder="你希望改善哪个环节？"></textarea><button class="button primary" type="submit">生成咨询邮件 <span aria-hidden="true">↗</span></button><p class="form-note" id="inquiry-status" role="status">点击后打开你设备上的邮件应用，由你确认发送。官网不会自动发送或保存表单内容。</p></form>
+    <form class="inquiry-form" id="inquiry-form"><h3>提交产品咨询</h3>
+<label for="inquiry-product">我想了解</label><select id="inquiry-product" name="product"><option value="CRM">风云 CRM 企业服务</option><option value="FOOTBALL">Feng 球探会员服务</option><option value="CUSTOM">企业接入与软件定制</option></select>
+<label for="inquiry-contact">称呼</label><input id="inquiry-contact" name="contactName" maxlength="80" required autocomplete="name">
+<label for="inquiry-company">企业名称 <span>选填</span></label><input id="inquiry-company" name="companyName" maxlength="160" autocomplete="organization">
+<label for="inquiry-mobile">联系电话（电话、邮箱至少一项）</label><input id="inquiry-mobile" name="mobile" type="tel" maxlength="40" autocomplete="tel">
+<label for="inquiry-email">联系邮箱</label><input id="inquiry-email" name="email" type="email" maxlength="254" autocomplete="email">
+<label for="inquiry-message">你的需求</label><textarea id="inquiry-message" name="requirement" rows="4" maxlength="1000" required placeholder="你希望改善哪个环节？"></textarea>
+<div class="inquiry-trap" aria-hidden="true"><label>网站<input name="website" tabindex="-1" autocomplete="off"></label></div>
+<p id="inquiry-notice" class="form-note">正在核对咨询接入和采集说明。官网不会自动提交；请勿填写身份证、支付密码等无关敏感信息。</p>
+<label class="inquiry-consent"><input id="inquiry-consent" type="checkbox" name="consentAccepted" required>我已阅读上述资料使用说明，同意为处理本次咨询提供联系资料。</label>
+<label id="inquiry-challenge-label" for="inquiry-answer">计算验证</label><input id="inquiry-answer" name="answer" inputmode="numeric" pattern="[0-9]{1,3}" maxlength="3" required autocomplete="off">
+<button id="inquiry-refresh" class="text-link" type="button">刷新验证／核对接入</button>
+<button class="button primary" id="inquiry-submit" type="submit" disabled>确认提交咨询</button><p class="form-note" id="inquiry-status" role="status" aria-live="polite">提交成功后显示真实受理回执，后续由工作人员联系；不自动创建客户或发送营销消息。</p></form>
   </div></section>
   <section class="shell faq-section"><h2>开始之前，你可能想知道</h2><div class="faq-grid"><details><summary>两个产品从哪里进入？</summary><p>Feng 球探和风云 CRM 已汇入统一产品域名 all.hunting-info.ltd。官网的产品按钮会带你进入对应入口，原域名按新的入口跳转。</p></details><details><summary>现在可以在线缴费吗？</summary><p>目前可以进入会员套餐、企业订阅与订单页面。真实在线支付尚未开放；请以产品内的支付状态为准，不要向个人收款码或不明链接付款。</p></details><details><summary>是否可以先体验再选择套餐？</summary><p>可注册 Feng 球探账户，或通过风云 CRM 注册企业。可用功能、试用券和有效期以各自账户中显示的权益为准。</p></details><details><summary>如何分享产品或咨询接入？</summary><p>可以分享本官网，也可以将已经正式发布的 CRM 营销活动链接发给客户。企业接入与定制需求可通过本页邮件或电话联系。</p></details></div></section>
   <section class="share-strip shell"><span>把这个起点，分享给需要的人。</span><button id="share-site" type="button" class="text-link">分享产品官网 <span aria-hidden="true">↗</span></button><p id="share-status" role="status"></p></section>

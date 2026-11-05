@@ -1,4 +1,4 @@
-import { safeInquiryEndpoint, validInquiryReceipt } from './inquiry-contract.mjs';
+import { safeInquiryEndpoint, validInquiryReceipt, inquiryRequestId } from './inquiry-contract.mjs';
 'use strict';
 const navigation = document.querySelector('#navigation');
 const toggle = document.querySelector('.nav-toggle');
@@ -44,8 +44,7 @@ let inquiryPending;
 let inquiryBusy = false;
 let inquiryGeneration = 0;
 function inquiryId() {
-  if (!crypto?.randomUUID) throw new Error('请使用支持安全随机数的现代浏览器。');
-  return crypto.randomUUID();
+  return inquiryRequestId();
 }
 function inquiryEndpoint() {
   const config = window.HUNTING_PORTAL_CONFIG || {};

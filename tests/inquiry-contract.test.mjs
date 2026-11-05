@@ -14,3 +14,11 @@ test('HTTP success alone never establishes receipt',()=>{
   for(const value of [null,{}, {code:0,message:'success'}, {submissionId:'internal-id',status:'PENDING'}, {submissionId:'d08605cb-c5d8-4d67-bca3-c71f1345594a',status:'PAID'}]) assert.equal(validInquiryReceipt(value),false);
   assert.equal(validInquiryReceipt({submissionId:'d08605cb-c5d8-4d67-bca3-c71f1345594a',status:'PENDING',duplicate:false}),true);
 });
+
+
+test('intranet HTTP request IDs use cryptographic randomness without randomUUID', async () => {
+ const {inquiryRequestId} = await import('../portal-assets/inquiry-contract.mjs');
+ const api = {getRandomValues(bytes) { bytes.fill(7); return bytes; }};
+ assert.match(inquiryRequestId(api), /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/);
+ assert.throws(() => inquiryRequestId({}), /安全随机数/);
+});

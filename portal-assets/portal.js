@@ -43,6 +43,7 @@ let inquiryChallenge;
 let inquiryPending;
 let inquiryBusy = false;
 let inquiryGeneration = 0;
+const refreshInquiryLabel = inquiryRefresh.textContent;
 function inquiryId() {
   return inquiryRequestId();
 }
@@ -70,12 +71,15 @@ function inquiryReceipt(receipt) {
   inquiryChallenge=undefined;
   inquiryForm.reset();
   inquirySubmit.disabled=true;
-  inquirySubmit.textContent='已受理；如需新咨询请先刷新验证';
+  inquirySubmit.textContent='本次咨询已受理';
+  inquiryRefresh.textContent='提交另一条咨询';
   [...inquiryForm.elements].forEach(control => {if(control.name && control.name!=='website')control.disabled=false;});
 }
 async function refreshInquiry() {
   if(inquiryBusy)return;
   const turn=++inquiryGeneration;inquiryBusy=true;inquirySubmit.disabled=true;inquiryRefresh.disabled=true;
+  inquirySubmit.textContent='正在加载验证…';
+  inquiryForm.setAttribute('aria-busy', 'true');
   try {
     inquiryRequest ??= inquiryId();
     const value=await inquiryFetch(`?request=${encodeURIComponent(inquiryRequest)}`);
@@ -88,12 +92,14 @@ async function refreshInquiry() {
     document.querySelector('#inquiry-answer').value='';
     document.querySelector('#inquiry-consent').checked=false;
     inquirySubmit.disabled=false;
+    inquiryRefresh.textContent=refreshInquiryLabel;
     inquirySubmit.textContent=inquiryPending?'核对原咨询／用原内容重试':'确认提交咨询';
     inquiryStatus.textContent=inquiryPending?'原咨询内容已锁定并保留在当前页面。请重新确认说明、完成验证；系统先查原回执。':'请阅读资料使用说明并完成验证，确认后才会提交。';
   } catch {
     inquiryChallenge=undefined;
+    inquirySubmit.textContent='请先刷新验证';
     inquiryStatus.textContent='当前咨询接入未就绪、已到期或网络不可用，尚未确认受理。填写内容保留在当前页面，请稍后核对，或通过左侧邮件、电话联系。';
-  } finally {if(turn===inquiryGeneration){inquiryBusy=false;inquiryRefresh.disabled=false;}}
+  } finally {if(turn===inquiryGeneration){inquiryBusy=false;inquiryRefresh.disabled=false;inquiryForm.removeAttribute('aria-busy');}}
 }
 inquiryRefresh.addEventListener('click',()=>void refreshInquiry());
 inquiryForm.addEventListener('submit',async(event)=>{
@@ -111,6 +117,8 @@ inquiryForm.addEventListener('submit',async(event)=>{
     [...inquiryForm.elements].forEach(control=>{if(['product','contactName','companyName','mobile','email','requirement'].includes(control.name))control.disabled=true;});
   }
   inquiryBusy=true;inquirySubmit.disabled=true;inquiryRefresh.disabled=true;
+  inquirySubmit.textContent='正在核对咨询受理…';
+  inquiryForm.setAttribute('aria-busy', 'true');
   try {
     const proof={requestId:inquiryRequest,ticket:inquiryChallenge.ticket,answer};
     // Lookup first, including after an uncertain prior POST. A 404 permits replay of the same immutable payload/key only.
@@ -119,11 +127,11 @@ inquiryForm.addEventListener('submit',async(event)=>{
     if(!receipt)receipt=await inquiryFetch('/submissions',{...inquiryPending,...proof});
     inquiryReceipt(receipt);
   } catch (error) {
-    if(error.status===400){inquiryPending=undefined;[...inquiryForm.elements].forEach(control=>{if(control.name)control.disabled=false;});inquiryStatus.textContent='内容或验证未通过，请核对联系方式、需求和计算结果，刷新验证后用原请求编号重试。';inquirySubmit.disabled=false;return;}
+    if(error.status===400){inquiryPending=undefined;[...inquiryForm.elements].forEach(control=>{if(control.name)control.disabled=false;});inquiryStatus.textContent='内容或验证未通过，请核对联系方式、需求和计算结果，刷新验证后用原请求编号重试。';inquirySubmit.textContent='请先刷新验证';return;}
     inquiryStatus.textContent='尚未确认受理。原内容和请求编号保留在当前页面，请勿重新填写或重复新建；可刷新验证后再次核对原咨询。若需离开，请先自行保存草稿。';
     inquirySubmit.disabled=false;
     inquirySubmit.textContent='核对原咨询／用原内容重试';
-  } finally {inquiryBusy=false;inquiryRefresh.disabled=false;}
+  } finally {inquiryBusy=false;inquiryRefresh.disabled=false;inquiryForm.removeAttribute('aria-busy');}
 });
 window.addEventListener('beforeunload',(event)=>{if(inquiryPending){event.preventDefault();event.returnValue='';}});
 void refreshInquiry();

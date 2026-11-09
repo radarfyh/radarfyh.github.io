@@ -5,6 +5,8 @@ if (area) {
   const text = (zh, en) => english ? en : zh;
   const list = area.querySelector('[data-mall-products]');
   const status = area.querySelector('[data-mall-status]');
+  const cartRegion = area.querySelector('[data-mall-cart-region]');
+  const feedback = area.querySelector('[data-mall-cart-feedback]');
   const selection = area.querySelector('[data-mall-cart]');
   const checkout = area.querySelector('[data-mall-checkout]');
   const refresh = area.querySelector('[data-mall-refresh]');
@@ -14,13 +16,22 @@ if (area) {
   const money = (fen) => new Intl.NumberFormat(english ? 'en-US' : 'zh-CN', { style: 'currency', currency: 'CNY' }).format(fen / 100);
   const node = (tag, value) => { const element = document.createElement(tag); if (value !== undefined) element.textContent = value; return element; };
   function drawCart() {
+    for (const button of list.querySelectorAll('[data-add-sku]')) {
+      const selected = cart.some((item) => item.sku === button.dataset.addSku);
+      button.textContent = selected ? text('查看购物车', 'View cart') : text('加入购物车', 'Add to cart');
+    }
     selection.replaceChildren();
     if (!cart.length) selection.append(node('p', text('购物车为空。每类产品可选一项。', 'Your cart is empty. Choose one plan per product.')));
     for (const item of cart) {
       const row = node('div'); row.className = 'mall-selection';
       row.append(node('span', `${item.title} · ${money(item.priceFen)}`));
       const remove = node('button', text('移除', 'Remove')); remove.type = 'button'; remove.className = 'button outline';
-      remove.addEventListener('click', () => { cart = cart.filter((value) => value.sku !== item.sku); drawCart(); });
+      remove.addEventListener('click', () => {
+        cart = cart.filter((value) => value.sku !== item.sku);
+        drawCart();
+        feedback.textContent = text(`已移除：${item.title}`, `Removed: ${item.title}`);
+        cartRegion.focus({ preventScroll: true });
+      });
       row.append(remove); selection.append(row);
     }
     checkout.hidden = !cart.length;
@@ -30,7 +41,7 @@ if (area) {
     const turn = ++generation;
     controller?.abort(); controller = new AbortController(); const active = controller;
     const timer = setTimeout(() => active.abort(), 10000);
-    refresh.disabled = true; status.textContent = text('正在读取当前商品…', 'Loading current products…');
+    refresh.disabled = true; feedback.textContent = ''; status.textContent = text('正在读取当前商品…', 'Loading current products…');
     try {
       const endpoint = safeMallEndpoint(window.HUNTING_PORTAL_CONFIG?.crmMallApi, location.hostname);
       const response = await fetch(endpoint, { credentials: 'omit', cache: 'no-store', redirect: 'error', signal: active.signal });
@@ -44,7 +55,19 @@ if (area) {
         subject.className = 'membership-index'; card.append(subject, node('h3', item.title), node('p', money(item.priceFen)));
         card.append(node('p', item.periodRule === 'ANNIVERSARY' ? text('一年，按上海时区周年计算', 'One year, anniversary in Asia/Shanghai') : item.periodRule === 'LIFETIME' ? text('长期免费', 'Free basic plan') : text(`连续${item.days}天`, `${item.days} consecutive days`)));
         const add = node('button', text('加入购物车', 'Add to cart')); add.type = 'button'; add.className = 'button primary';
-        add.addEventListener('click', () => { cart = addProduct(cart, item); drawCart(); });
+        add.dataset.addSku = item.sku;
+        add.addEventListener('click', () => {
+          if (!cart.some((value) => value.sku === item.sku)) {
+            const replaced = cart.some((value) => value.product === item.product);
+            cart = addProduct(cart, item);
+            drawCart();
+            feedback.textContent = replaced
+              ? text(`已替换同类商品：${item.title}`, `Replaced with: ${item.title}`)
+              : text(`已加入购物车：${item.title}`, `Added to cart: ${item.title}`);
+          }
+          cartRegion.focus({ preventScroll: true });
+          cartRegion.scrollIntoView({ block: 'start' });
+        });
         const detail = node('details'); detail.append(node('summary', text('权益与办理说明', 'Details and eligibility')),
           node('p', item.product === 'CRM' ? text('CRM由当前企业管理员办理；具体功能、试用资格和额度请在企业订阅页核对。', 'CRM checkout requires your enterprise administrator. Review features, trial eligibility and quotas in the subscription centre.') : text('Feng球探由本人购买，分析不承诺比赛结果或收益。', 'Feng Scout is a personal membership. Analysis does not guarantee outcomes or returns.')));
         card.append(detail, add); list.append(card);

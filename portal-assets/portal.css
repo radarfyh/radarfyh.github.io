@@ -22,3 +22,11 @@ p,li,.section-description{font-size:1rem;line-height:1.8}
 .product-card p,.inquiry-form label,.mall-card p,.faq p{font-size:1rem}
 small,.hint,.fine-print{font-size:.875rem;line-height:1.7}
 @media(max-width:680px){.value-strip .shell{display:grid;grid-template-columns:1fr 1fr;font-size:.9375rem;gap:12px}p,li{font-size:1rem}.brand-icon{width:36px;height:36px}}
+
+.mall-cart {
+  scroll-margin-top: 7rem;
+}
+
+.mall-cart [data-mall-cart-feedback]:empty {
+  margin: 0;
+}
